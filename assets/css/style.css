@@ -1,0 +1,33 @@
+:root {
+  --sec: #3182A8;
+  --pri: #153959;
+  --pri2: #96B9D9;
+  --pri3: #3FB2BF;
+  --sec2: #05F2DB;
+  --black: #0D0D0D;
+
+  --mark0: #5890A6;
+  --mark1: #5897A6;
+  --mark2: #56828C;
+  --mark-help0: #D8F2F0;
+  --mark-help1: #F2F2F2;
+}
+
+body {
+  font-family: "Noto Serif", serif;
+}
+
+.navbar-brand img {
+  max-width: 170px;
+}
+/* 
+header {
+  background-image: url(https://prod.ucwe.capgemini.com/gb-en/wp-content/uploads/sites/5/2023/04/Burberry-X-Capgemini-Innovation.jpg?w=2880&quality=70);
+  background-size: cover;
+  background-position: center;
+} */
+
+header nav a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.375em !important;
+}
