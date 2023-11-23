@@ -188,7 +188,7 @@ h2::before {
   /* background-color: var(--bg-primary); */
   top: 64px;
   position: absolute;
-  left: calc(50% - 35px);
+  left: calc(50% - 44px);
 }
 
 h2::after {
@@ -199,7 +199,7 @@ h2::after {
   /* color: var(--pri2); */
   color: blue;
   top: 40px;
-  left: 52%;
+  left: 51.7%;
   position: absolute;
   right: calc(50% - 15px);
 }
