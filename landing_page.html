@@ -42,7 +42,6 @@
       crossorigin="anonymous"
     />
     <!-- <link rel="stylesheet" href="assets/css/style.css" /> -->
-    <link rel="stylesheet" href="assets/css/landing_page_style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -65,9 +64,45 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    /> -->
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script> -->
+    <script src="assets/js/script.js" defer></script>
+    <link rel="stylesheet" href="assets/css/landing_page_style.css" />
   </head>
   <body>
-    <header class="">
+    <header class="" id="form">
       <nav class="navbar navbar-expand-lg navbar">
         <div class="container">
           <a class="navbar-brand" href="#">
@@ -138,116 +173,122 @@
           </div>
         </div>
       </nav>
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col p-3 d-flex flex-column justify-content-center">
-            <!-- <img
-            class="img-fluid h-100 object-fit-cover object-position-center"
-            src="assets/img/WhatsApp Image 2023-11-21 at 20.49.35.jpeg" alt=""> -->
+      <div id="header-main">
+        <div class="container">
+          <div class="row">
+            <div class="col-8 p-3 d-flex flex-column justify-content-start mt-5">
+              <!-- <img
+              class="img-fluid h-100 object-fit-cover object-position-center"
+              src="assets/img/WhatsApp Image 2023-11-21 at 20.49.35.jpeg" alt=""> -->
 
-            <h1 class="fs-2 fw-bold color-pri">
-              Unlock your dream home with hassle-free HOME LOANS
-            </h1>
-            <p>
-              Compare Interest Rates, Check Eligibility & Calculate your EMIs in
-              one Place.
-            </p>
-            <p>Get pre-approved hassle-free home loans in 10 days</p>
-          </div>
-          <div
-            class="col align-items-center justify-content-center d-flex flex-grow-1"
-          >
-            <div class="">
-              <!-- <form>
-                <div class="form-floating mb-3">
-                  <input
-                    type="email"
-                    class="form-control"
-                    id="floatingInput"
-                    placeholder="name@example.com"
-                  />
-                  <label for="floatingInput">Email address</label>
-                </div>
-                <div class="form-floating">
-                  <input
-                    type="password"
-                    class="form-control"
-                    id="floatingPassword"
-                    placeholder="Password"
-                  />
-                  <label for="floatingPassword">Password</label>
-                </div>
-                <div class="mb-3 form-check">
-                  <input
-                    type="checkbox"
-                    class="form-check-input"
-                    id="exampleCheck1"
-                  />
-                  <label class="form-check-label" for="exampleCheck1"
-                    >Check me out</label
-                  >
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-              </form> -->
-
-              <script src="assets/js/script.js"></script>
-              <div class="form-bg">
-                <h3>Tell us about your requirements</h3>
-
-                <div class="form">
-                  <select name="loan-type" class="form-preferency form-select">
-                    <option selected disabled>Select Your Loan Type</option>
-                    <option value="home-loan">Home Loan</option>
-                    <option value="loan-against-property">
-                      Loan Aganist Property
-                    </option>
-                  </select>
-                  <input
-                    placeholder="Name"
-                    maxlength="50"
-                    name="form-name"
-                    type="text"
-                    class="form-control"
-                  />
-                  <input
-                    placeholder="Phone Number"
-                    maxlength="9"
-                    name="form-phone"
-                    type="text"
-                    class="form-control"
-                  />
-                  <input
-                    placeholder="E-mail"
-                    maxlength="50"
-                    name="form-email"
-                    type="text"
-                    class="form-control"
-                  />
-
-                  <!-- <label for="form-auth">
-                        <input id="form-auth" type="checkbox">
-                        <div class="box"></div>
-                        <sup>
-                            I agree to give my information to be used to contact me.
-                          </sup>
-                        </label> -->
-
-                  <div class="form-check">
+              <h1 class="fs-2 fw-bold text-white">
+                Unlock your dream home with hassle-free HOME LOANS
+              </h1>
+              <p class="text-white">
+                Compare Interest Rates, Check Eligibility & Calculate your EMIs
+                in one Place.
+              </p>
+              <p class="text-white">
+                Get pre-approved hassle-free home loans in 10 days
+              </p>
+            </div>
+            <div
+              class="col align-items-center justify-content-center d-flex flex-grow-1"
+            >
+              <div class="">
+                <!-- <form>
+                  <div class="form-floating mb-3">
                     <input
-                      class="form-check-input"
-                      type="checkbox"
-                      value=""
-                      id="flexCheckDefault"
+                      type="email"
+                      class="form-control"
+                      id="floatingInput"
+                      placeholder="name@example.com"
                     />
-                    <label
-                      class="form-check-label d-inline-block small"
-                      for="flexCheckDefault"
-                    >
-                      I agree to give my information to be used to contact me.
-                    </label>
+                    <label for="floatingInput">Email address</label>
                   </div>
+                  <div class="form-floating">
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="floatingPassword"
+                      placeholder="Password"
+                    />
+                    <label for="floatingPassword">Password</label>
+                  </div>
+                  <div class="mb-3 form-check">
+                    <input
+                      type="checkbox"
+                      class="form-check-input"
+                      id="exampleCheck1"
+                    />
+                    <label class="form-check-label" for="exampleCheck1"
+                      >Check me out</label
+                    >
+                  </div>
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </form> -->
 
-                  <h2>Get a quote</h2>
+                <div class="form-bg">
+                  <h3>Tell us about your requirements</h3>
+
+                  <div class="form">
+                    <select
+                      name="loan-type"
+                      class="form-preferency form-select"
+                    >
+                      <option selected disabled>Select Your Loan Type</option>
+                      <option value="home-loan">Home Loan</option>
+                      <option value="loan-against-property">
+                        Loan Aganist Property
+                      </option>
+                    </select>
+                    <input
+                      placeholder="Name"
+                      maxlength="50"
+                      name="form-name"
+                      type="text"
+                      class="form-control"
+                    />
+                    <input
+                      placeholder="Phone Number"
+                      maxlength="9"
+                      name="form-phone"
+                      type="text"
+                      class="form-control"
+                    />
+                    <input
+                      placeholder="E-mail"
+                      maxlength="50"
+                      name="form-email"
+                      type="text"
+                      class="form-control"
+                    />
+
+                    <!-- <label for="form-auth">
+                          <input id="form-auth" type="checkbox">
+                          <div class="box"></div>
+                          <sup>
+                              I agree to give my information to be used to contact me.
+                            </sup>
+                          </label> -->
+
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault"
+                      />
+                      <label
+                        class="form-check-label d-inline-block small"
+                        for="flexCheckDefault"
+                      >
+                        I agree to give my information to be used to contact me.
+                      </label>
+                    </div>
+
+                    <div>Get a quote</div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -258,7 +299,7 @@
     <main>
       <!-- <a href="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">text</a> -->
 
-      <section class="social-proof">
+      <section class="social-proof my-5">
         <div class="container py-5">
           <div class="row">
             <div class="col">
@@ -361,8 +402,322 @@
           </div>
         </div>
       </section>
+      <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+      <script>
+        const swiper = new Swiper(".swiper", {
+          // Optional parameters
+          direction: "horizontal",
+          loop: true,
+          autoplay: true,
+          speed: 400,
+          spaceBetween: 100,
+
+          breakpoints: {
+            // when window width is >= 320px
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            // when window width is >= 480px
+            480: {
+              slidesPerView: 2,
+              spaceBetween: 30,
+            },
+            // when window width is >= 640px
+            640: {
+              slidesPerView: 3,
+              spaceBetween: 40,
+            },
+          },
+          // If we need pagination
+          pagination: {
+            el: ".swiper-pagination",
+          },
+
+          // Navigation arrows
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+
+          // And if we need scrollbar
+          scrollbar: {
+            el: ".swiper-scrollbar",
+          },
+        });
+      </script> -->
+
+      <section class="interest py-5 my-5">
+        <div class="container">
+          <h2 class="text-center fw-bolder h-pri fs-1">
+            Interest rates & Charges
+          </h2>
+          <p class="my-5 fs-1 fw-light">
+            All About Finances is a modern digital lending market place that is
+            changing the house loan business by providing a faster, transparent
+            and more digitised home owning experience.
+          </p>
+        </div>
+
+        <div class="container">
+          <div class="owl-carousel owl-theme" id="owl-01">
+            <div class="item py-5 bg-white">
+              <div class="card p-4 position-relative pt-5">
+                <div
+                  class="card-img-top top-0 position-absolute translate-middle-y bg-white"
+                >
+                  <img
+                    src="assets/img/bajaj2.avif"
+                    class="card-img-top ms-3"
+                    alt=""
+                  />
+                </div>
+                <div class="card-header bg-white border-0 mt-3">
+                  <h4 class="fw-bold">8.75% - 11.95%</h4>
+                  <div class="text-primary">ROI (Rate Of Interest)</div>
+                  <hr />
+                  <h4 class="fw-bold">INR 10,000 to 0.50%</h4>
+                  <div class="text-primary">Processing Fees</div>
+                  <hr />
+                  <h4 class="fw-bold">30</h4>
+                  <div class="text-primary">Tenure</div>
+                </div>
+              </div>
+            </div>
+            <div class="item py-5 bg-white">
+              <div class="card p-4 position-relative pt-5">
+                <div
+                  class="card-img-top top-0 position-absolute translate-middle-y bg-white"
+                >
+                  <img
+                    src="assets/img/hdfc.webp"
+                    class="card-img-top ms-3"
+                    alt=""
+                  />
+                </div>
+                <div class="card-header bg-white border-0 mt-3">
+                  <h4 class="fw-bold">8.75% - 11.95%</h4>
+                  <div class="text-primary">ROI (Rate Of Interest)</div>
+                  <hr />
+                  <h4 class="fw-bold">INR 10,000 to 0.50%</h4>
+                  <div class="text-primary">Processing Fees</div>
+                  <hr />
+                  <h4 class="fw-bold">30</h4>
+                  <div class="text-primary">Tenure</div>
+                </div>
+              </div>
+            </div>
+            <div class="item py-5 bg-white">
+              <div class="card p-4 position-relative pt-5">
+                <div
+                  class="card-img-top top-0 position-absolute translate-middle-y bg-white"
+                >
+                  <img
+                    src="assets/img/icici.png"
+                    class="card-img-top ms-3"
+                    alt=""
+                  />
+                </div>
+                <div class="card-header bg-white border-0 mt-3">
+                  <h4 class="fw-bold">8.75% - 11.95%</h4>
+                  <div class="text-primary">ROI (Rate Of Interest)</div>
+                  <hr />
+                  <h4 class="fw-bold">INR 10,000 to 0.50%</h4>
+                  <div class="text-primary">Processing Fees</div>
+                  <hr />
+                  <h4 class="fw-bold">30</h4>
+                  <div class="text-primary">Tenure</div>
+                </div>
+              </div>
+            </div>
+            <div class="item py-5 bg-white">
+              <div class="card p-4 position-relative pt-5">
+                <div
+                  class="card-img-top top-0 position-absolute translate-middle-y bg-white"
+                >
+                  <img
+                    src="assets/img/idfc.jpg"
+                    class="card-img-top ms-3"
+                    alt=""
+                  />
+                </div>
+                <div class="card-header bg-white border-0 mt-3">
+                  <h4 class="fw-bold">8.75% - 11.95%</h4>
+                  <div class="text-primary">ROI (Rate Of Interest)</div>
+                  <hr />
+                  <h4 class="fw-bold">INR 10,000 to 0.50%</h4>
+                  <div class="text-primary">Processing Fees</div>
+                  <hr />
+                  <h4 class="fw-bold">30</h4>
+                  <div class="text-primary">Tenure</div>
+                </div>
+              </div>
+            </div>
+            <div class="item py-5 bg-white">
+              <div class="card p-4 position-relative pt-5">
+                <div
+                  class="card-img-top top-0 position-absolute translate-middle-y bg-white"
+                >
+                  <img
+                    src="assets/img/kotak.jpg"
+                    class="card-img-top ms-3"
+                    alt=""
+                  />
+                </div>
+                <div class="card-header bg-white border-0 mt-3">
+                  <h4 class="fw-bold">8.75% - 11.95%</h4>
+                  <div class="text-primary">ROI (Rate Of Interest)</div>
+                  <hr />
+                  <h4 class="fw-bold">INR 10,000 to 0.50%</h4>
+                  <div class="text-primary">Processing Fees</div>
+                  <hr />
+                  <h4 class="fw-bold">30</h4>
+                  <div class="text-primary">Tenure</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="item py-5 bg-white">
+              <div class="card p-4 position-relative pt-5">
+                <div
+                  class="card-img-top top-0 position-absolute translate-middle-y bg-white"
+                >
+                  <img
+                    src="assets/img/landt.png"
+                    class="card-img-top ms-3"
+                    alt=""
+                  />
+                </div>
+                <div class="card-header bg-white border-0 mt-3">
+                  <h4 class="fw-bold">8.75% - 11.95%</h4>
+                  <div class="text-primary">ROI (Rate Of Interest)</div>
+                  <hr />
+                  <h4 class="fw-bold">INR 10,000 to 0.50%</h4>
+                  <div class="text-primary">Processing Fees</div>
+                  <hr />
+                  <h4 class="fw-bold">30</h4>
+                  <div class="text-primary">Tenure</div>
+                </div>
+              </div>
+            </div>
+            <div class="item py-5 bg-white">
+              <div class="card p-4 position-relative pt-5">
+                <div
+                  class="card-img-top top-0 position-absolute translate-middle-y bg-white"
+                >
+                  <img
+                    src="assets/img/navi.png"
+                    class="card-img-top ms-3"
+                    alt=""
+                  />
+                </div>
+                <div class="card-header bg-white border-0 mt-3">
+                  <h4 class="fw-bold">8.75% - 11.95%</h4>
+                  <div class="text-primary">ROI (Rate Of Interest)</div>
+                  <hr />
+                  <h4 class="fw-bold">INR 10,000 to 0.50%</h4>
+                  <div class="text-primary">Processing Fees</div>
+                  <hr />
+                  <h4 class="fw-bold">30</h4>
+                  <div class="text-primary">Tenure</div>
+                </div>
+              </div>
+            </div>
+            <div class="item py-5 bg-white">
+              <div class="card p-4 position-relative pt-5">
+                <div
+                  class="card-img-top top-0 position-absolute translate-middle-y bg-white"
+                >
+                  <img
+                    src="assets/img/pnb.avif"
+                    class="card-img-top ms-3"
+                    alt=""
+                  />
+                </div>
+                <div class="card-header bg-white border-0 mt-3">
+                  <h4 class="fw-bold">8.75% - 11.95%</h4>
+                  <div class="text-primary">ROI (Rate Of Interest)</div>
+                  <hr />
+                  <h4 class="fw-bold">INR 10,000 to 0.50%</h4>
+                  <div class="text-primary">Processing Fees</div>
+                  <hr />
+                  <h4 class="fw-bold">30</h4>
+                  <div class="text-primary">Tenure</div>
+                </div>
+              </div>
+            </div>
+            <div class="item py-5 bg-white">
+              <div class="card p-4 position-relative pt-5">
+                <div
+                  class="card-img-top top-0 position-absolute translate-middle-y bg-white"
+                >
+                  <img
+                    src="assets/img/sbi.webp"
+                    class="card-img-top ms-3"
+                    alt=""
+                  />
+                </div>
+                <div class="card-header bg-white border-0 mt-3">
+                  <h4 class="fw-bold">8.75% - 11.95%</h4>
+                  <div class="text-primary">ROI (Rate Of Interest)</div>
+                  <hr />
+                  <h4 class="fw-bold">INR 10,000 to 0.50%</h4>
+                  <div class="text-primary">Processing Fees</div>
+                  <hr />
+                  <h4 class="fw-bold">30</h4>
+                  <div class="text-primary">Tenure</div>
+                </div>
+              </div>
+            </div>
+            <div class="item py-5 bg-white">
+              <div class="card p-4 position-relative pt-5">
+                <div
+                  class="card-img-top top-0 position-absolute translate-middle-y bg-white"
+                >
+                  <img
+                    src="assets/img/tata.png"
+                    class="card-img-top ms-3"
+                    alt=""
+                  />
+                </div>
+                <div class="card-header bg-white border-0 mt-3">
+                  <h4 class="fw-bold">8.75% - 11.95%</h4>
+                  <div class="text-primary">ROI (Rate Of Interest)</div>
+                  <hr />
+                  <h4 class="fw-bold">INR 10,000 to 0.50%</h4>
+                  <div class="text-primary">Processing Fees</div>
+                  <hr />
+                  <h4 class="fw-bold">30</h4>
+                  <div class="text-primary">Tenure</div>
+                </div>
+              </div>
+            </div>
+            <!--  -->
+          </div>
+        </div>
+      </section>
     </main>
 
+    <section class="my-5">
+      <h2 class="text-center fw-bolder h-pri fs-1">Check Eligibility</h2>
+      <div class="bg-band">
+        <div class="container py-5 my-5">
+          <div class="col-5">
+            <h3 class="display-4">
+              Applying for a home loan is now made easier
+            </h3>
+            <p class="my-4 fs-6">
+              Get fast, easy & reliable home loans at the lowest interest rates
+              with profound agent support only through All About Finances.
+            </p>
+            <a href="#form" class="mt-4 btn btn-primary"
+              >Check Eligibility Now</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
     <footer class="text-center bg-dark py-5 mt-5 text-white">
       &copy; All Rights Reserved. All About Finances 2023.
     </footer>
