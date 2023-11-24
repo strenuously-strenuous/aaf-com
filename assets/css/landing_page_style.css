@@ -32,8 +32,8 @@ header .row {
   min-height: calc(100vh - 95px);
 }
 
-#header-main .row > :first-child {
-  background: url("../img/top-banner.jfif");
+#header-main .row {
+  background: url("../img/top-banner-removebg-preview.png");
   background-size: cover;
   background-position: left;
   background-repeat: no-repeat;
@@ -320,11 +320,20 @@ body #owl-01 .owl-next span {
   );
 }
 
-header {
+/* header {
   /* background: #29405f; */
   background: #163762;
-}
+} */
 
 nav {
   background-color: white;
+}
+
+
+/* text-shadow: 1px 1px 3px #000 */
+
+#header-main .container {
+  background: url(../img/top-banner-removebg-preview\ \(1\).png);
+  background-repeat: no-repeat;
+  background-position: 220px 0;
 }
