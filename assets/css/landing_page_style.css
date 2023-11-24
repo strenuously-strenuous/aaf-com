@@ -188,7 +188,7 @@ h2::before {
   /* background-color: var(--pri2); */
   background-color: blue;
   /* background-color: var(--bg-primary); */
-  top: 64px;
+  top: 130%;
   position: absolute;
   left: calc(50% - 44px);
 }
@@ -200,7 +200,7 @@ h2::after {
   /* height: 3px; */
   /* color: var(--pri2); */
   color: blue;
-  top: 40px;
+  top: 80%;
   left: 51.7%;
   position: absolute;
   right: calc(50% - 15px);
@@ -285,7 +285,8 @@ body #owl-01 .owl-next span {
   /* background-color: var(--pri2); */
   background-color: blue;
   /* background-color: var(--bg-primary); */
-  top: 64px;
+  top: 130%;
+
   position: absolute;
   /* left: calc(50% - 35px); */
 }
@@ -297,7 +298,7 @@ body #owl-01 .owl-next span {
   /* height: 3px; */
   /* color: var(--pri2); */
   color: blue;
-  top: 45px;
+  top: 80%;
   left: 70px;
   position: absolute;
   /* right: calc(50% - 15px); */
@@ -336,4 +337,28 @@ nav {
   background: url(../img/top-banner-removebg-preview\ \(1\).png);
   background-repeat: no-repeat;
   background-position: 220px 0;
+}
+
+.founders-note {
+  background: url(http://b-active.ie/wp-content/uploads/2016/08/testimonial-slider-background-black.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+.founders-note video {
+  max-width: 300px;
+}
+
+.founders-note .row {
+  max-width: 800px;
+}
+
+.founders-note h2::before {
+  left: 0;
+  
+}
+.founders-note h2::after {
+  top: 113%;
+  left: 20.3%;
 }
