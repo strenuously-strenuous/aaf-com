@@ -99,7 +99,14 @@
 
     <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script> -->
     <script src="assets/js/script.js" defer></script>
+
     <link rel="stylesheet" href="assets/css/landing_page_style.css" />
+
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <!-- <script>
+      google.charts.load('current', {packages: ['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+    </script> -->
   </head>
   <body>
     <header class="" id="form">
@@ -327,7 +334,7 @@
         </div>
       </section>
 
-      <section class="why-us my-5">
+      <section class="why-us my-5 py-5">
         <div class="container">
           <h2 class="text-center fw-bolder h-pri fs-1">Why us</h2>
           <p class="my-5 fs-1 fw-light">
@@ -743,7 +750,7 @@
       </div>
     </section>
 
-    <section class="mt-5">
+    <section class="mt-5 pt-5">
       <div class="container">
         <div class="owl-carousel owl-theme" id="owl-01">
           <div class="item mb-5">
@@ -823,7 +830,8 @@
                     <input
                       type="text"
                       class="form-control"
-                      aria-label="Amount (to the nearest dollar)"
+                      aria-label="Amount"
+                      id="loan-amount"
                     />
                   </div>
                 </div>
@@ -852,7 +860,8 @@
                     <input
                       type="text"
                       class="form-control"
-                      aria-label="Amount (to the nearest dollar)"
+                      aria-label="interest"
+                      id="interest-rate"
                     />
                   </div>
                 </div>
@@ -874,7 +883,8 @@
                     <input
                       type="text"
                       class="form-control"
-                      aria-label="Amount (to the nearest dollar)"
+                      aria-label="loan-tenure"
+                      id="loan-tenure"
                     />
                   </div>
                 </div>
@@ -889,10 +899,45 @@
               >
             </div>
           </div>
-          <div class="col bg-dark"></div>
+          <div class="col p-5">
+            <div>
+              <p id="monthly-interest"></p>
+              <p id="monthly-payment"></p>
+              <p id="total-payment"></p>
+              <p id="total-interest"></p>
+            </div>
+            <div id="myPieChart" class="h-100 w-100"></div>
+          </div>
         </div>
       </div>
     </section>
+
+    <script>
+      google.charts.load("current", { packages: ["corechart"] });
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ["Loan Amount", "Hours per Day"],
+          ["Interest Rate", 11],
+          ["Loan Tenure", 2],
+          ["Commute", 2],
+          ["Watch TV", 2],
+          ["Sleep", 7],
+        ]);
+
+        var options = {
+          is3D: true,
+          legend: "bottom",
+        };
+
+        var chart = new google.visualization.PieChart(
+          document.getElementById("myPieChart")
+        );
+
+        chart.draw(data, options);
+      }
+    </script>
 
     <footer class="text-center bg-dark py-5 text-white">
       &copy; All Rights Reserved. All About Finances 2023.

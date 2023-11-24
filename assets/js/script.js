@@ -48,10 +48,16 @@ function reset() {
   document.getElementById("total-interest").innerHTML = " $ " + 0;
 }
 
+document.querySelectorAll(".input").forEach((item) => {
+  item.addEventListener("onchange", (event) => {
+    calculation();
+  });
+});
+
 function calculation() {
-  var loanAmount = document.getElementById("value1").value;
-  var interestRate = document.getElementById("value2").value;
-  var loanDuration = document.getElementById("value3").value;
+  var loanAmount = document.getElementById("loan-amount").value;
+  var interestRate = document.getElementById("interest-rate").value;
+  var loanDuration = document.getElementById("loan-tenure").value;
 
   //.......... declarations.............
 
