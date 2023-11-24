@@ -100,7 +100,7 @@
     <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script> -->
     <script src="assets/js/script.js" defer></script>
 
-    <link rel="stylesheet" href="assets/css/landing_page_style.css" />
+    <link rel="stylesheet" defer href="assets/css/landing_page_style.css" />
 
     <script src="https://www.gstatic.com/charts/loader.js"></script>
     <!-- <script>
@@ -816,7 +816,7 @@
         <div class="row mt-5 row-cols-1 row-cols-md-2">
           <div class="col p-5 bg-light">
             <h3 class="h2 mb-5">EMI Calculator</h3>
-            <p class="lead">Avoid Confusion, Find everything</p>
+            <p class="lead">Avoid Confusion, Find All About Finances</p>
             <div>
               <div class="mt-5">
                 <div class="row mb-3 align-items-center">
@@ -832,6 +832,8 @@
                       class="form-control"
                       aria-label="Amount"
                       id="loan-amount"
+                      pattern="^[0-9a-zA-z]+(,[0-9a-zA-z]+){0,11}$"
+                      value="5,00,000"
                     />
                   </div>
                 </div>
@@ -862,6 +864,9 @@
                       class="form-control"
                       aria-label="interest"
                       id="interest-rate"
+                      value="5"
+                      min="5"
+                      max="20"
                     />
                   </div>
                 </div>
@@ -884,7 +889,10 @@
                       type="text"
                       class="form-control"
                       aria-label="loan-tenure"
+                      placeholder="in months"
                       id="loan-tenure"
+                      min="1"
+                      value="1"
                     />
                   </div>
                 </div>
@@ -901,10 +909,25 @@
           </div>
           <div class="col p-5">
             <div>
-              <p id="monthly-interest"></p>
-              <p id="monthly-payment"></p>
-              <p id="total-payment"></p>
-              <p id="total-interest"></p>
+              <div class="text-center">
+                Your monthly EMI is: <br> 
+                <span id="monthly-payment" class="fw-bold fs-1"></s>
+              </div>
+              <div class="row text-center mt-5 pt-5">
+                <div class="col">
+                  Monthly Interest: <br>
+                  <span id="monthly-interest"></span>
+                </div>
+                
+                <div class="col">
+                  Total Interest: <br>
+                  <span id="total-interest"></span>
+                </div>
+                <div class="col">
+                  Total Payment: <br>
+                  <span id="total-payment"></span>
+                </div>
+              </div>
             </div>
             <div id="myPieChart" class="h-100 w-100"></div>
           </div>
@@ -918,17 +941,25 @@
 
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ["Loan Amount", "Hours per Day"],
-          ["Interest Rate", 11],
-          ["Loan Tenure", 2],
-          ["Commute", 2],
-          ["Watch TV", 2],
-          ["Sleep", 7],
+          ['Loan', 'Loan Breakup'],
+          ["Loan Amount", 10],
+          ["Interest Rate", 10],
+          ["Loan Tenure", 10],
+          ["Total Payment", 10],
+          ["Total Interest", 60],
         ]);
 
+        
         var options = {
-          is3D: true,
-          legend: "bottom",
+          // is3D: true,
+          // title: 'Total Principal Amount: 100',
+          pieHole: 0.4,
+          // legend: "bottom",
+          pieSliceText: 'label',
+          pieSliceTextStyle: {
+            color: 'black',
+          },
+          legend: 'none'
         };
 
         var chart = new google.visualization.PieChart(

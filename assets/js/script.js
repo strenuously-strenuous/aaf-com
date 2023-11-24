@@ -47,15 +47,19 @@ function reset() {
   document.getElementById("total-repayment").innerHTML = " $ " + 0;
   document.getElementById("total-interest").innerHTML = " $ " + 0;
 }
+calculation();
 
-document.querySelectorAll(".input").forEach((item) => {
-  item.addEventListener("onchange", (event) => {
+document.querySelectorAll(".emi input").forEach((item) => {
+  item.addEventListener("keypress", (event) => {
     calculation();
   });
 });
 
 function calculation() {
-  var loanAmount = document.getElementById("loan-amount").value;
+  // debugger;
+  var loanAmount = document
+    .getElementById("loan-amount")
+    .value.replaceAll(",", "");
   var interestRate = document.getElementById("interest-rate").value;
   var loanDuration = document.getElementById("loan-tenure").value;
 
@@ -71,21 +75,73 @@ function calculation() {
   //----------------monthly interest----------------------
 
   document.getElementById("monthly-interest").innerHTML =
-    " $ " + monthlyInterest.toFixed(2);
+    Math.ceil(monthlyInterest.toFixed(2));
 
   //-------------Monthly payment------------
 
   document.getElementById("monthly-payment").innerHTML =
-    " $ " + monthlyPayment.toFixed(2);
+    Math.ceil(monthlyPayment.toFixed(2));
 
   //-------------Total repayment-----------
 
-  document.getElementById("total-repayment").innerHTML =
-    " $ " + totalRepayment.toFixed(2);
+  document.getElementById("total-payment").innerHTML =
+    Math.ceil(totalRepayment.toFixed(2));
 
   //--------------Total Interest cost----------------
 
   document.getElementById("total-interest").innerHTML =
-    " $ " + totalInterestCost.toFixed(2);
+    Math.ceil(totalInterestCost.toFixed(2));
+
+  // var data = google.visualization.arrayToDataTable([
+  //   ["Loan", "Loan Breakup"],
+  //   ["Loan Amount", loanAmount],
+  //   ["Interest Rate", interestRate],
+  //   ["Loan Tenure", loanDuration],
+  //   ["Total Payment", totalRepayment.toFixed(2)],
+  //   ["Total Interest", totalInterestCost.toFixed(2)],
+  // ]);
+
+  // chart.draw(data);
+
+  // function drawVisualization() {
+  //   var wrapper = new google.visualization.ChartWrapper({
+  //     chartType: "ColumnChart",
+  //     dataTable: [
+  //       [ "Germany", "USA", "Brazil"],
+  //       [ loanAmount, loanAmount, loanAmount],
+  //     ],
+  //     options: { title: "Countries" },
+  //     containerId: "myPieChart",
+  //   });
+  //   wrapper.draw();
+  // }
+
+  // drawVisualization();
 }
 // emi calc
+
+//
+
+var chart = new google.visualization.ChartWrapper({
+  chartType: "donut",
+  containerId: "myPieChart",
+  dataTable: [
+    ["Loan", "Loan Breakup"],
+    ["Loan Amount", 10],
+    ["Interest Rate", 10],
+    ["Loan Tenure", 10],
+    ["Total Payment", 10],
+    ["Total Interest", 60],
+  ],
+  options: {
+    height: 300,
+    width: 500,
+    pieHole: 0.4,
+    pieSliceText: "label",
+    pieSliceTextStyle: {
+      color: "black",
+    },
+    legend: "none",
+  },
+});
+chart.draw();
