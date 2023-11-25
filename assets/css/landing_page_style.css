@@ -371,3 +371,15 @@ nav {
 .form-cus select {
   height: fit-content;
 }
+
+.fw-bold.fs-1::after {
+  content: '.';
+  font-size: 88px;
+  position: absolute;
+  left: 71%;
+  top: -73%;
+  color: lightblue;
+}
+.social-proof .row > div {
+  position: relative;
+}
