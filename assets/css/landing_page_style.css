@@ -27,16 +27,16 @@ header nav + .container {
   min-height: calc(100vh - 95px);
 }
 
-.nav + div,
-header .row {
+.nav + div, header .container > .row {
   min-height: calc(100vh - 95px);
 }
 
-#header-main .row {
-  background: url("../img/top-banner-removebg-preview.png");
+#header-main >div > .row > :nth-child(2) {
+  background: url("../img/shorted.png");
   background-size: cover;
   background-position: left;
   background-repeat: no-repeat;
+  position: relative;
 }
 
 header .row > :nth-child(2) {
@@ -63,11 +63,11 @@ html {
 .form-bg {
   /* width: 330px; */
   background-image: linear-gradient(#fff, #eee);
-  box-shadow: 1px 1px 50px 0.2px rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
+  /* box-shadow: 1px 1px 50px 0.2px rgba(0, 0, 0, 0.2); */
+  /* border-radius: 8px; */
   margin: auto;
 }
-.form-bg h3 {
+/* .form-bg h3 {
   width: 100%;
   color: #fff;
   padding: 8px;
@@ -76,8 +76,8 @@ html {
   text-align: center;
   margin-top: 0;
   border-radius: 8px 8px 0 0;
-}
-.form {
+} */
+/* .form {
   display: grid;
   width: 100%;
   row-gap: 10px;
@@ -85,12 +85,12 @@ html {
   grid-template-columns: repeat(2, 1fr);
   padding: 15px;
   margin: auto;
-}
+} */
 .form > input,
 .form > select {
-  width: 100%;
+  /* width: 100%; */
   /* font-size: 9pt; */
-  padding: 9px;
+  /* padding: 9px;
   background-color: #ebecf0;
   border-radius: 6px;
   color: var(--black);
@@ -100,48 +100,48 @@ html {
   -webkit-appearance: none;
   border: 0;
   outline: 0;
-  text-shadow: 1px 1px 0 #fff;
+  text-shadow: 1px 1px 0 #fff; */
 }
-header select,
+/* header select,
 header .form-check {
   grid-column: span 2;
-}
-.form > input:focus,
+} */
+/* .form > input:focus,
 .form > select:focus {
   box-shadow: inset 1px 1px 1px #babecc, inset -1px -1px 2px #fff;
-}
-option {
+} */
+/* option {
   background-color: #fff;
-}
-.form > input {
+} */
+/* .form > input {
   grid-column: 1 / 3;
 }
 .form-number {
   grid-column: 1 / 3;
-}
+} */
 /* .form label{
     padding: 20px;
 } */
 .form label .box {
   /* width: 20px;
     height: 20px; */
-  background-color: #eee;
+  /* background-color: #eee;
   border: 1px solid rgba(0, 0, 0, 0.1);
   display: inline-block;
   margin-right: 10px;
-  cursor: pointer;
+  cursor: pointer; */
 }
 /* .active {
   transition: 0.3s;
   background-color: #26d0ff !important;
 } */
-.form label sup {
+/* .form label sup {
   font-size: 10px;
-  /* color: gray; */
+  color: gray;
   color: var(--black);
   cursor: pointer;
-}
-.form div:last-child {
+} */
+/* .form div:last-child {
   transition: 0.3s;
   width: 100%;
   margin: auto;
@@ -154,7 +154,7 @@ option {
   border-radius: 8px;
   grid-column: 1 / 3;
   margin-top: 30px;
-}
+} */
 .form div:last-child:hover {
   transition: 0.3s;
   cursor: pointer;
@@ -361,4 +361,13 @@ nav {
 .founders-note h2::after {
   top: 113%;
   left: 20.3%;
+}
+
+.form-bg {
+
+}
+
+.form-cus input, 
+.form-cus select {
+  height: fit-content;
 }
