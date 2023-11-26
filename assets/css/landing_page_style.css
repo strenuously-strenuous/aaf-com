@@ -1,5 +1,15 @@
 @import url(../../assets/css/style.css);
 
+:root {
+  --black: #0b0c10;
+  --secondary-black: #1f2833;
+  --grey: #c5c6c7;
+  --lightgrey: #66fcf1;
+  --sim-green: #45a29e;
+
+  --m-blue: #96b9d9;
+}
+
 /* .brand-hightlighter > span {
   color: var(--sec);
   font-size: 18px;
@@ -19,20 +29,17 @@
   color: var(--pri);
 }
 
-.brand-hightighter img {
-  width: 260px;
-}
-
 header nav + .container {
   min-height: calc(100vh - 95px);
 }
 
-.nav + div, header .container > .row {
+.nav + div,
+header .container > .row {
   min-height: calc(100vh - 95px);
 }
 
-#header-main >div > .row > :nth-child(2) {
-  background: url("../img/shorted.png");
+header {
+  background: url("../img/2main-sec-brand/1.jpg");
   background-size: cover;
   background-position: left;
   background-repeat: no-repeat;
@@ -267,7 +274,7 @@ body #owl-01 .owl-next span {
 }
 
 .navbar-brand img {
-  max-width: 150px;
+  max-width: 250px;
 }
 
 .btn:hover {
@@ -322,29 +329,27 @@ body #owl-01 .owl-next span {
 }
 
 /* header {
-  /* background: #29405f; */
+  background: #29405f;
   background: #163762;
 } */
 
-nav {
+/* nav {
   background-color: white;
-}
-
+} */
 
 /* text-shadow: 1px 1px 3px #000 */
 
-#header-main {
+/* #header-main {
   background: url(../img/top-banner-removebg-preview\ \(1\).png);
   background-repeat: no-repeat;
   background-position: 220px 0;
-}
+} */
 
 .founders-note {
   background: url(../img/testimonial-slider-background-black.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
 }
 .founders-note video {
   max-width: 300px;
@@ -356,24 +361,14 @@ nav {
 
 .founders-note h2::before {
   left: 0;
-  
 }
 .founders-note h2::after {
   top: 113%;
   left: 20.3%;
 }
 
-.form-bg {
-
-}
-
-.form-cus input, 
-.form-cus select {
-  height: fit-content;
-}
-
 .fw-bold.fs-1::after {
-  content: '.';
+  content: ".";
   font-size: 88px;
   position: absolute;
   left: 71%;
@@ -382,4 +377,70 @@ nav {
 }
 .social-proof .row > div {
   position: relative;
+}
+
+#radios-header label {
+}
+
+/* cp custom radio header */
+
+.card-radio-btn .content_sub {
+  color: #9e9e9e;
+  font-size: 14px;
+}
+
+.card-input-element + .card {
+  justify-content: center;
+  box-shadow: none;
+  border: 1px solid var(--secondary-black);
+  border-radius: 33px;
+  text-align: center;
+}
+
+.card-input-element + .card:hover {
+  cursor: pointer;
+}
+
+.card-input-element:checked + .content_head {
+  color: white;
+}
+.card-input-element:checked + .card {
+  background-color: var(--m-blue);
+  /* color: white !important; */
+  /* border-color: transparent; */
+}
+
+/* cp custom radio header */
+
+#main-inner-form label {
+  color: var(--black);
+  font-size: 12px !important;
+  font-weight: 500;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+#main-inner-form input::placeholder {
+  color: var(--secondary-black);
+  font-weight: 300;
+  font-size: 18px;
+}
+
+#main-inner-form input:focus {
+  outline: none;
+}
+#main-inner-form input {
+  padding: 12px 0;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid var(--secondary-black);
+  
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+
+}
+
+#main-inner-form input::-webkit-outer-spin-button,
+#main-inner-form input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
 }

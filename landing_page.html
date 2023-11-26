@@ -111,10 +111,10 @@
   <body>
     <header class="position-relative" id="form">
       <nav class="navbar navbar-expand-lg navbar py-0">
-        <div class="container">
+        <div class="container-fluid">
           <a class="navbar-brand" href="#">
             <!-- <img src="assets/img/logo-bl-aaf.jfif" alt="" /> -->
-            <img src="assets/img/logo.png" alt="" />
+            <img src="assets/img/sec-header-hindi-bg-removed-blue.png" alt="" />
           </a>
           <button
             class="navbar-toggler d-lg-none"
@@ -169,7 +169,8 @@
                   <span class="">Har Ghar Ke Liye Loan...</span>
                 </div>
                 </div> -->
-                <img src="assets/img/sec-logo-aaf.png" alt="" />
+                <!-- <img src="assets/img/sec-logo-aaf.png" alt="" /> -->
+                <button class="btn btn-outline-primary">Call</button>
               </li>
               <!-- <li class="nav-item">
                 <a class="nav-link " href="#">
@@ -182,11 +183,11 @@
         </div>
       </nav>
       <div id="header-main">
-        <div class="container">
-          <div class="row ">
-            <div class="overlay-header position-absolute top-0 end-0 start-0 bottom-0 n-1"></div>
+        <div class="container-fluid">
+          <div class="row">
+            <!-- <div class="overlay-header position-absolute top-0 end-0 start-0 bottom-0 n-1"></div> -->
             <div
-              class="col-12 col-sm-6 p-3 d-flex flex-column  justify-content-end"
+              class="col-12 ps-5 col-sm-7 p-3 d-flex flex-column  justify-content-end"
             >
               <!-- <img
               class="img-fluid h-100 object-fit-cover object-position-center"
@@ -226,88 +227,114 @@
                 </div>
             </div>
             <div
-              class="col-6 align-items-center justify-content-center d-flex flex-grow-1"
+              class="col-5 pe-0 align-items-center justify-content-center d-flex flex-grow-1"
             >
               <div class="w-100 h-100">
-                <!-- <form>
-                  <div class="form-floating mb-3">
-                    <input
-                      type="email"
-                      class="form-control"
-                      id="floatingInput"
-                      placeholder="name@example.com"
-                    />
-                    <label for="floatingInput">Email address</label>
-                  </div>
-                  <div class="form-floating">
-                    <input
-                      type="password"
-                      class="form-control"
-                      id="floatingPassword"
-                      placeholder="Password"
-                    />
-                    <label for="floatingPassword">Password</label>
-                  </div>
-                  <div class="mb-3 form-check">
-                    <input
-                      type="checkbox"
-                      class="form-check-input"
-                      id="exampleCheck1"
-                    />
-                    <label class="form-check-label" for="exampleCheck1"
-                      >Check me out</label
-                    >
-                  </div>
-                  <button type="submit" class="btn btn-primary">Submit</button>
-                </form> -->
 
-                <div class="form-cus bg-white n-3 position-relative h-100 p-5">
-                  <h3 class="fs-3 text-start">Tell us about your requirements</h3>
+                <div class="form-cus bg-white n-3 position-relative h-100 py-5 px-5">
+                  <h3 class="fs-4 text-start fw-bold">Tell us about your requirements</h3>
 
-                  <form class=" row mt-5 row-gap-4">
-                    <div class="col-12 col-md-6">
-                      <select
-                        name="loan-type"
-                        class="text-muted form-preferency border-0 border-bottom border-dark rounded-0  form-select"
-                      >
-                        <option class="text-muted" selected disabled>Select Your Loan Type</option>
-                        <option class="text-muted" value="home-loan">Home Loan</option>
-                        <option class="text-muted" value="loan-against-property">
-                          Loan Aganist Property
-                        </option>
-                      </select>
+                  <form class=" row mt-4 row-gap-4 w-100" id="main-form">
+                    <div class="col-12 " id="radios-header">
+                      <div class="form-check-inline mb-4">
+                        <label class="card-radio-btn me-3">
+                          <input type="radio" name="loan-type" class="card-input-element d-none" id="demo1" checked="">
+                          <div class="card px-5 py-2">
+                            <div class="content_head ">Home Loan</div>
+                          </div>
+                        </label>
+                        <label class="card-radio-btn">
+                          <input type="radio" name="loan-type" class="card-input-element d-none" id="demo1" checked="">
+                          <div class="card px-5 py-2">
+                            <div class="content_head">Home Loan</div>
+                          </div>
+                        </label>
+                        
                     </div>
-                    <div class="border-0 col-12 col-md-6">
-                      <input
-                        placeholder="Name"
-                        maxlength="50"
-                        name="form-name"
-                        type="text"
-                        class="form-control border-0 border-bottom border-dark rounded-0"
-                      />
-                    </div>
+                    <div class="col-12">
+                      <div class="row" id="main-inner-form">
+                        <div class="col-12 mb-3">
+                          <div class="row">
+                            <div class="border-0 col-12 col-sm-6 col-md-6">
+                              <label for="" class="text-uppercase fw-light">First Name</label>
+                              <input
+                                maxlength="50"
+                                name="firstname"
+                                type="text"
+                                placeholder="Enter Your First Name"
+                                class=" "
+                              />
+                            </div>
+                            <div class="border-0 col-12 col-sm-6 col-md-6">
+                              <label for="" class="text-uppercase fw-light">Last Name</label>
+                              <input
+                                maxlength="50"
+                                name="lastname"
+                                type="text"
+                                placeholder="Enter Your Last Name"
+                                class=" "
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-12 mb-3">
+                          <div class="row">
+                            <div class="border-0 col-12 col-sm-6 col-md-6">
+                              <label for="" class="text-uppercase fw-light">Email ID</label>
+                              <input
+                                maxlength="50"
+                                name="email"
+                                type="email"
+                                placeholder="Enter Email ID"
+                                class=" "
+                              />
+                            </div>
+                            <div class="border-0 col-12 col-sm-6 col-md-6">
+                              <label for="" class="text-uppercase fw-light">Contact Number</label>
+                              <input
+                                maxlength="50"
+                                name="mobile"
+                                type="number"
+                                placeholder="Enter Your Contact"
+                                class=" "
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-12 mb-3">
+                          <div class="row">
+                            <div class="border-0 col-12 col-sm-6 col-md-6">
+                              <label for="" class="text-uppercase fw-light">Loan Amount</label>
+                              <input
+                                maxlength="50"
+                                name="loan-amount"
+                                type="number"
+                                placeholder="Enter Amount"
+                                class=" "
+                              />
+                            </div>
+                            <div class="border-0 col-12 col-sm-6 col-md-6">
+                              <label for="" class="text-uppercase fw-light">PinCode</label>
+                              <input
+                                maxlength="50"
+                                name="pincode"
+                                type="number"
+                                placeholder="Enter Pincode"
+                                class=" "
+                              />
+                            </div>
+                          </div>
+                        </div>
 
-                    <div class="border-0 col-12 col-md-6">
-                      <input
-                        placeholder="Phone Number"
-                        maxlength="9"
-                        name="form-phone"
-                        type="text"
-                        class="form-control border-0 border-bottom border-dark rounded-0"
-                      />
-                    </div>
-                    <div class="border-0 col-12 col-md-6">
-
-                    <input
-                      placeholder="E-mail"
-                      maxlength="50"
-                      name="form-email"
-                      type="text"
-                      class="form-control border-0 border-bottom border-dark rounded-0"
-                    />
                       </div>
+                    </div>
+                  
 
-                    <div class="form-check mt-3">
+                    
+
+              
+
+                    <!-- <div class="form-check mt-3">
                       <input
                         class="form-check-input p-2"
                         type="checkbox"
@@ -321,11 +348,13 @@
                       >
                         I agree to give my information to be used to contact me.
                       </label>
-                    </div>
+                    </div> -->
 
-                    <button class="btn btn-primary mt-4 py-2">Get a quote</button>
+                    <div class="d-flex ">
+                      <button class="btn btn-primary mt-4 py-2 px-4">NEXT</button>
+                    </div>
                   </form>
-                  <div class="my-5 p-2 bg-white d-inline-block">
+                  <div class="mt-4 p-2 bg-white d-inline-block">
                     <img 
                     src="https://buyroofslate.co.uk/wp-content/uploads/2023/04/google-reviews.png"
                     width="150"
