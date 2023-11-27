@@ -3,6 +3,20 @@
 $x: #bada55;
 $blue: #96b9d9;
 // $primary: $x;
+$mycustom-dark: #495057;
+
+.btn-mycustom-dark {
+  background-color: var(--mycustom-dark) !important;
+}
+.btn-mycustom-dark:hover {
+  background-color: var(--pri) !important;
+}
+
+// $custom-colors: {
+//   'mycustom-dark':#495057: ;
+// }
+
+// $theme-colors: map-merge($theme-colors, $custom-colors);
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
@@ -213,3 +227,29 @@ h2::before {
   }
 }
 // wa icon anim
+
+h2 {
+  text-transform: uppercase;
+}
+
+#emi-chart {
+  background: var(--pri);
+  // background: var(--mark0);
+}
+
+#company-info {
+  max-width: 700px;
+  margin-inline: auto;
+}
+
+.btn-primary {
+  padding: 14px 30px;
+}
+.btn-mycustom-dark {
+  // background-color: var(--mycustom-dark) !important;
+  background-color: #2b2b2d !important;
+  color: #fff !important;
+}
+.btn-mycustom-dark:hover {
+  background-color: var(--pri) !important;
+}

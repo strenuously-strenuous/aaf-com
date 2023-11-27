@@ -1,12 +1,12 @@
 :root {
   --sec: #3182a8;
   /* --pri: #153959; */
-  --pri: rgba(150, 185, 217, 1);
+  --pri: #96b9d9;
   --pri2: #96b9d9;
   --pri3: #3fb2bf;
   --sec2: #05f2db;
   --black: #0d0d0d;
-
+  --mycustom-dark: #495057;
   --mark0: #5890a6;
   --mark1: #5897a6;
   --mark2: #56828c;

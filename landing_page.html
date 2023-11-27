@@ -306,7 +306,7 @@
                     </div> -->
 
                     <div class="d-flex ">
-                      <button class="btn btn-primary mt-4 py-2 px-4">NEXT</button>
+                      <button class="btn btn-mycustom-dark mt-4 py-2 px-4">NEXT</button>
                     </div>
                   </form>
                   <div class="mt-4 p-2 bg-white d-inline-block" id="social_proof--header">
@@ -380,22 +380,34 @@
         </div>
       </section>
 
-      <section class="why-us my-5 py-5">
+      <section class="why-us">
         <div class="container">
           <!-- <div class="d-flex align-items-center flex-column">
             <div class="box-arrow mt-4"></div>
           </div> -->
-          <div class="d-flex flex-column align-items-center">
-            <h2 class="text-center fw-bolder h-pri fs-1">Why us</h2>
-            <img class="img-arrow" src="assets/img/arr (1).svg" alt="">
+
+          <div class="row mb-5 pb-5">
+            <div class="col-12 col-md-6 d-flex align-items-start flex-column justify-content-center">
+                <h2 class="fw-bolder h-pri fs-1 w-100 ">Why us</h2>
+                <img class="img-arrow" src="assets/img/arr (1).svg" alt="">
+              <p class="my-5 fs-4 fw-light">
+                All About Finances is a modern digital lending market place that is
+                changing the house loan business by providing a faster, transparent
+                and more digitised home owning experience.
+              </p>
+              <!-- <a
+              href="#form"
+              class="btn btn-mycustom-dark  d-inline-block"
+              >Apply Now!</a
+            > -->
+            </div>
+            <div class="col-12 col-md-6">
+              <video autoplay muted src="assets/video/Untitled design.mp4" class="w-100"></video>
+            </div>
           </div>
-          <p class="my-5 fs-1 fw-light">
-            All About Finances is a modern digital lending market place that is
-            changing the house loan business by providing a faster, transparent
-            and more digitised home owning experience.
-          </p>
+         
           <div
-            class="row row-cols-1 row-cols-sm-2 row-cols-md-4 gap-4 gap-md-0"
+            class="row row-cols-1 row-cols-sm-2 row-cols-md-4 gap-4 gap-md-0 mb-5 pb-5"
           >
             <div class="col">
               <div class="card pt-3">
@@ -459,13 +471,13 @@
               </div>
             </div>
           </div>
-          <div class="mt-5 d-flex justify-content-center">
+          <!-- <div class="mt-5 d-flex justify-content-center">
             <a
               href="#form"
-              class="btn btn-primary text-center mx-auto d-inline-block"
+              class="btn btn-mycustom-dark text-center mx-auto d-inline-block"
               >Apply Now!</a
             >
-          </div>
+          </div> -->
         </div>
       </section>
       <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -790,7 +802,7 @@
                 rates with profound agent support only through All About
                 Finances.
               </p>
-              <a href="#form" class="mt-4 btn btn-primary"
+              <a href="#form" class="mt-4 btn btn-mycustom-dark"
                 >Check Eligibility Now</a
               >
             </div>
@@ -852,7 +864,7 @@
     </section>
 
 
-    <section class="founders-note">
+    <!-- <section class="founders-note">
       <div class="container py-5 my-5 d-flex align-items-center justify-content-center">
         <div class="row bg-white rounded-3 overflow-hidden">
           <div class="px-0 col">
@@ -877,7 +889,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
 
     <section class="emi">
@@ -971,12 +983,12 @@
                   <span> 30 </span>
                 </div>
               </div>
-              <a href="#form" class="btn btn-primary mt-5 text-end"
+              <a href="#form" class="btn btn-mycustom-dark mt-5 text-end"
                 >Apply Now</a
               >
             </div>
           </div>
-          <div class="col p-5 overflow-y-hidden">
+          <div class="col p-5 overflow-y-hidden" id="emi-chart">
             <div>
               <div class="text-center">
                 Your monthly EMI is: <br> 
@@ -998,7 +1010,7 @@
                 </div>
               </div>
             </div>
-            <div id="myPieChart" class="h-100 w-100"></div>
+            <div id="myPieChart" class="h-100 w-100 d-flex  justify-content-center"></div>
           </div>
         </div>
       </div>
@@ -1023,8 +1035,11 @@
           // is3D: true,
           // title: 'Total Principal Amount: 100',
           pieHole: 0.4,
+          width:300,
+          height:300,
           // legend: "bottom",
           pieSliceText: 'label',
+          backgroundColor: 'transparent',
           pieSliceTextStyle: {
             color: 'black',
           },
@@ -1040,6 +1055,31 @@
     </script>
 
     <footer class="text-center bg-dark py-5 text-white">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <img src="assets/img/logo.png" alt="">
+            <h3 class="fw-bold mt-4">All About Finances</h3>
+            <p class="small" id="company-info">
+              All About Finances is a modern digital lending market place that is
+              changing the house loan business by providing a faster, transparent
+              and more digitised home owning experience.
+            </p>
+
+            <div class="d-flex justify-content-center mb-4">
+              <a href="disclaimer.html" target="_blank" class="me-3">
+                Disclaimer
+              </a>
+              <a href="privacy-policy.html" target="_blank" class="me-3">
+                Privacy Policy
+              </a>
+              <a href="terms-and-conditions.html" target="_blank" class="me-3">
+                Terms & Conditions
+              </a>
+          </div>
+        </div>
+      </div>
+      
       &copy; All Rights Reserved. All About Finances 2023.
     </footer>
   </body>

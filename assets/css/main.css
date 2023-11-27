@@ -1,5 +1,13 @@
 @charset "UTF-8";
 @import "landing_page_style.css";
+.btn-mycustom-dark {
+  background-color: var(--mycustom-dark) !important;
+}
+
+.btn-mycustom-dark:hover {
+  background-color: var(--pri) !important;
+}
+
 /*!
  * Bootstrap  v5.3.2 (https://getbootstrap.com/)
  * Copyright 2011-2023 The Bootstrap Authors
@@ -12161,4 +12169,29 @@ h2::before, .h2::before {
   100% {
     transform: scale(1);
   }
+}
+h2, .h2 {
+  text-transform: uppercase;
+}
+
+#emi-chart {
+  background: var(--pri);
+}
+
+#company-info {
+  max-width: 700px;
+  margin-inline: auto;
+}
+
+.btn-primary {
+  padding: 14px 30px;
+}
+
+.btn-mycustom-dark {
+  background-color: #2b2b2d !important;
+  color: #fff !important;
+}
+
+.btn-mycustom-dark:hover {
+  background-color: var(--pri) !important;
 }/*# sourceMappingURL=main.css.map */
