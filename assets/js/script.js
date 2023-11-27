@@ -36,6 +36,16 @@ $(".owl-carousel").owlCarousel({
   },
 });
 
+let wabtn_wrapper = document.querySelector("#cta-fixed");
+
+window.addEventListener("scroll", function () {
+  if (window.scrollY > 300) {
+    wabtn_wrapper.classList.remove("visually-hidden");
+  } else if (window.scrollY < 300) {
+    wabtn_wrapper.classList.add("visually-hidden");
+  }
+});
+
 // emi calc
 function reset() {
   document.getElementById("value1").value = 0;
@@ -74,23 +84,27 @@ function calculation() {
 
   //----------------monthly interest----------------------
 
-  document.getElementById("monthly-interest").innerHTML =
-    Math.ceil(monthlyInterest.toFixed(2));
+  document.getElementById("monthly-interest").innerHTML = Math.ceil(
+    monthlyInterest.toFixed(2)
+  );
 
   //-------------Monthly payment------------
 
-  document.getElementById("monthly-payment").innerHTML =
-    Math.ceil(monthlyPayment.toFixed(2));
+  document.getElementById("monthly-payment").innerHTML = Math.ceil(
+    monthlyPayment.toFixed(2)
+  );
 
   //-------------Total repayment-----------
 
-  document.getElementById("total-payment").innerHTML =
-    Math.ceil(totalRepayment.toFixed(2));
+  document.getElementById("total-payment").innerHTML = Math.ceil(
+    totalRepayment.toFixed(2)
+  );
 
   //--------------Total Interest cost----------------
 
-  document.getElementById("total-interest").innerHTML =
-    Math.ceil(totalInterestCost.toFixed(2));
+  document.getElementById("total-interest").innerHTML = Math.ceil(
+    totalInterestCost.toFixed(2)
+  );
 
   // var data = google.visualization.arrayToDataTable([
   //   ["Loan", "Loan Breakup"],

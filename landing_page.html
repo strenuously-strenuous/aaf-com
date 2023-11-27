@@ -35,12 +35,6 @@
     <meta name="msapplication-TileColor" content="#ffffff" />
     <meta name="theme-color" content="#ffffff" />
     <!-- favicon -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
     <!-- <link rel="stylesheet" href="assets/css/style.css" /> -->
     <link
       rel="stylesheet"
@@ -58,12 +52,6 @@
       rel="stylesheet"
     />
     <!-- fonts -->
-
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-    ></script>
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
@@ -100,16 +88,20 @@
     <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script> -->
     <script src="assets/js/script.js" defer></script>
 
-    <link rel="stylesheet" defer href="assets/css/landing_page_style.css" />
+    <!-- <link rel="stylesheet" defer href="assets/css/landing_page_style.css" /> -->
 
     <script src="https://www.gstatic.com/charts/loader.js"></script>
     <!-- <script>
       google.charts.load('current', {packages: ['corechart']});
       google.charts.setOnLoadCallback(drawChart);
     </script> -->
+
+    <link rel="stylesheet" href="assets/css/main.css">
+    
   </head>
-  <body>
-    <header class="position-relative" id="form">
+  <body class="position-relative">
+  
+    <header class="position-relative bg-danger text-primary" id="form">
       <nav class="navbar navbar-expand-lg navbar py-0">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
@@ -129,55 +121,15 @@
           </button>
           <div class="collapse navbar-collapse" id="collapsibleNavId">
             <ul class="navbar-nav ms-auto gap-3 mt-2 mt-lg-0">
-              <!-- <li class="nav-item">
-                <a class="nav-link active " href="#" aria-current="page"
-                  >Home <span class="visually-hidden">(current)</span></a
-                >
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  id="dropdownId"
-                  data-bs-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                  >Loans</a
-                >
-                <div class="dropdown-menu" aria-labelledby="dropdownId">
-                  <a class="dropdown-item " href="#">Home Loan</a>
-                  <a class="dropdown-item " href="#">Business Loan</a>
-                  <a class="dropdown-item " href="#">Personal Loan</a>
-                  <a class="dropdown-item " href="#">Used Car Loan</a>
-                  <a class="dropdown-item " href="#">Loan Aganist Property</a>
-                </div>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link " href="#"> About </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link " href="#"> Calculate Your EMI </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link " href="#"> Blog </a>
-              </li> -->
-              <li class="nav-item brand-hightighter">
-                <!-- <div class="brand-hightlighter">
-                  <span class="fw-bold">All About Finances</span>
-                <div>
-                    <img class="" src="https://cdn.pixabay.com/photo/2012/04/24/12/04/arrow-39644_1280.png" alt="">
-                  <span class="">Har Ghar Ke Liye Loan...</span>
-                </div>
-                </div> -->
-                <!-- <img src="assets/img/sec-logo-aaf.png" alt="" /> -->
+              <!-- <li class="nav-item brand-hightighter">
                 <button class="btn btn-outline-primary">Call</button>
-              </li>
-              <!-- <li class="nav-item">
-                <a class="nav-link " href="#">
-                  <i class="fa-solid fa-phone xs"></i>
-                  92059 70585
-                </a>
               </li> -->
+              <li class="nav-item" id="cta-header-wrapper">
+                <a class="nav-link text-white " href="#">
+                  <i class="fa-solid fa-phone xs"></i>
+                  920-5970-585
+                </a>
+              </li>
             </ul>
           </div>
         </div>
@@ -227,24 +179,27 @@
                 </div>
             </div>
             <div
-              class="col-5 pe-0 align-items-center justify-content-center d-flex flex-grow-1"
+              class=" col-5 pe-0 align-items-center justify-content-center d-flex flex-grow-1"
             >
               <div class="w-100 h-100">
 
                 <div class="form-cus bg-white n-3 position-relative h-100 py-5 px-5">
-                  <h3 class="fs-4 text-start fw-bold">Tell us about your requirements</h3>
+                  <h3 class="fs-4 text-dark text-start fw-bold">Tell us about your requirements</h3>
 
-                  <form class=" row mt-4 row-gap-4 w-100" id="main-form">
+                  <form class=" row mt-4 row-gap-4 w-100" id="main-form" method="POST" action="">
                     <div class="col-12 " id="radios-header">
                       <div class="form-check-inline mb-4">
                         <label class="card-radio-btn me-3">
-                          <input type="radio" name="loan-type" value="homeloan" class="card-input-element d-none" id="demo1" checked="">
+                          <input type="radio" name="loan-type" value="homeloan" 
+                          class="card-input-element d-none" id="demo1">
                           <div class="card px-5 py-2">
                             <div class="content_head ">Home Loan</div>
                           </div>
                         </label>
                         <label class="card-radio-btn">
-                          <input type="radio" name="loan-type" value="loan-against-property" class="card-input-element d-none" id="demo1" checked="">
+                          <input type="radio" name="loan-type" 
+                          value="loan-against-property" 
+                          class="card-input-element d-none" id="demo1">
                           <div class="card px-5 py-2">
                             <div class="content_head">Loan Against Property</div>
                           </div>
@@ -354,23 +309,23 @@
                       <button class="btn btn-primary mt-4 py-2 px-4">NEXT</button>
                     </div>
                   </form>
-                  <div class="mt-4 p-2 bg-white d-inline-block">
+                  <div class="mt-4 p-2 bg-white d-inline-block" id="social_proof--header">
                     <img 
-                    src="https://buyroofslate.co.uk/wp-content/uploads/2023/04/google-reviews.png"
-                    width="150"
+                    src="assets/img/google-review.png"
+                    height=""
                     class="img-fluid"
                     alt="">
                     
                     <img 
-                    width="100"
+                    height=""
                     class="img-fluid"
-                    src="https://i0.wp.com/www.wiceindia.com/wp-content/uploads/2021/07/Sulekha-Reviews.png?fit=255%2C227&ssl=1" 
+                    src="assets/img/sulekha2-removebg-preview.png"
                     alt="">
 
                     <img 
-                    width="120"
+                    height=""
                     class="img-fluid"
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAWfXU9dYWV7W2gLQhPzkKPg1i-golnuw421DHR3LHomkkRrh1QaRiRJF2e2aVlXnVTxQ&usqp=CAU"
+                    src="assets/img/jd.png"
                     alt="">
                 </div>
               </div>
@@ -379,6 +334,23 @@
         </div>
       </div>
     </header>
+
+    <div class="" id="cta-fixed">
+      <div class='call-wrraper'><div class='animation-wrapper'>
+        <a href='tel:09197124011' class='btn-custom btn-call'>
+        <!-- <i class="fa fa-phone" aria-hidden="true"></i> -->
+        <img src="assets/img/whatsapp.png" width="50" />
+
+        </a>
+        <div class='animation-one'></div>
+        <div class='animation-tow'></div><div class='animation-tree'></div></div></div>
+
+
+      <!-- <a href="#">
+        <img src="assets/img/whatsapp.png" width="50" />
+      </a> -->
+    </div>
+
     <main>
       <!-- <a href="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">text</a> -->
 
@@ -410,7 +382,13 @@
 
       <section class="why-us my-5 py-5">
         <div class="container">
-          <h2 class="text-center fw-bolder h-pri fs-1">Why us</h2>
+          <!-- <div class="d-flex align-items-center flex-column">
+            <div class="box-arrow mt-4"></div>
+          </div> -->
+          <div class="d-flex flex-column align-items-center">
+            <h2 class="text-center fw-bolder h-pri fs-1">Why us</h2>
+            <img class="img-arrow" src="assets/img/arr (1).svg" alt="">
+          </div>
           <p class="my-5 fs-1 fw-light">
             All About Finances is a modern digital lending market place that is
             changing the house loan business by providing a faster, transparent
@@ -854,18 +832,6 @@
           <div class="item mb-5">
             <img
               src="assets/img/carousel-banners/WhatsApp Image 2023-11-23 at 19.22.57 (2).jpeg"
-              alt=""
-            />
-          </div>
-          <div class="item mb-5">
-            <img
-              src="assets/img/carousel-banners/WhatsApp Image 2023-11-23 at 19.22.57.jpeg"
-              alt=""
-            />
-          </div>
-          <div class="item mb-5">
-            <img
-              src="assets/img/carousel-banners/WhatsApp Image 2023-11-23 at 19.22.58.jpeg"
               alt=""
             />
           </div>

@@ -190,11 +190,9 @@ h2 {
 h2::before {
   content: "";
   display: block;
-  width: 80px;
+  width: 100px;
   height: 3px;
-  /* background-color: var(--pri2); */
-  background-color: blue;
-  /* background-color: var(--bg-primary); */
+  background: var(--pri);
   top: 130%;
   position: absolute;
   left: calc(50% - 44px);
@@ -206,7 +204,7 @@ h2::after {
   /* width: 50px; */
   /* height: 3px; */
   /* color: var(--pri2); */
-  color: blue;
+  background: var(--bg-primary);
   top: 80%;
   left: 51.7%;
   position: absolute;
@@ -223,6 +221,8 @@ h2::after {
   border-radius: 25px;
   /* border: 1px solid #aaa; */
   overflow: hidden;
+  left: 50%;
+  translate: -50%;
 }
 
 .interest .owl-carousel img {
@@ -442,4 +442,16 @@ body #owl-01 .owl-next span {
 #main-inner-form input::-webkit-outer-spin-button,
 #main-inner-form input::-webkit-inner-spin-button {
   -webkit-appearance: none;
+}
+
+#cta-header-wrapper i {
+  margin-right: 8px;
+}
+#cta-header-wrapper a {
+  letter-spacing: 2px;
+}
+#cta-header-wrapper a:hover {
+  letter-spacing: 2px;
+  opacity: 0.6;
+  text-decoration: none;
 }
