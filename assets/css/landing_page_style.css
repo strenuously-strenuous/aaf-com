@@ -290,7 +290,7 @@ body #owl-01 .owl-next span {
   width: 80px;
   height: 3px;
   /* background-color: var(--pri2); */
-  background-color: blue;
+  background-color: var(--pri);
   /* background-color: var(--bg-primary); */
   top: 130%;
 
@@ -304,7 +304,7 @@ body #owl-01 .owl-next span {
   /* width: 50px; */
   /* height: 3px; */
   /* color: var(--pri2); */
-  color: blue;
+  color: var(--pri);
   top: 80%;
   left: 70px;
   position: absolute;
