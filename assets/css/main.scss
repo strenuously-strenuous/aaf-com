@@ -53,7 +53,6 @@ $mycustom-dark: #495057;
     max-width: 120px;
     border: 1px solid var(--pri);
     padding: 8px 12px;
-
   }
   img {
     // filter: grayscale(50%);
@@ -214,20 +213,20 @@ h2::before {
 }
 
 .animation-one {
-  background-color: #cfdb4d;
+  background-color: rgb(0 0 0 / 42%);
 }
 
 .animation-tow {
   width: 70px;
   height: 70px;
-  border: 2px solid #c6d335;
+  border: 2px solid #495057;
   animation-delay: 0.3s;
 }
 
 .animation-tree {
   width: 85px;
   height: 85px;
-  border: 1px solid #ccdb20;
+  border: 1px solid #495057;
   animation-delay: 0.5s;
 }
 
@@ -271,4 +270,8 @@ h2 {
 }
 .btn-mycustom-dark:hover {
   background-color: var(--pri) !important;
+}
+
+body #owl-01 .owl-prev, body #owl-01 .owl-next {
+  display: flex;
 }

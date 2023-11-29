@@ -244,7 +244,7 @@ body #owl-01 .owl-next {
 
 body #owl-01 .owl-prev span,
 body #owl-01 .owl-next span {
-  margin-top: -5px;
+  margin-block: -5px 5px;
 }
 .owl-nav {
   position: absolute;
