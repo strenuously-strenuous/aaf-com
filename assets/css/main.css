@@ -11986,7 +11986,8 @@ textarea.form-control-lg {
   }
 }
 #cta-header-wrapper a i {
-  animation: phone-shake 1s ease-in-out infinite;
+  animation: phone-shake 0.5s ease-in-out infinite;
+  font-size: 18px;
 }
 
 @keyframes phone-shake {

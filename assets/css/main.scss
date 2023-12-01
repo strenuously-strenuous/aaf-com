@@ -21,7 +21,8 @@ $mycustom-dark: #495057;
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
 #cta-header-wrapper a i {
-  animation: phone-shake 1s ease-in-out infinite;
+  animation: phone-shake 0.5s ease-in-out infinite;
+  font-size: 18px;
 }
 
 @keyframes phone-shake {

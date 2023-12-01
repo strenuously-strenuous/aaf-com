@@ -18,6 +18,19 @@
 
 // interação do botão de autoriazação do formulário FIM
 
+let btnF = document.querySelector("#requestQuoteButton");
+let btnFClose = document.querySelector("#btn-fclose");
+let form = document.querySelector("#modal1");
+
+btnF.addEventListener("click", function (e) {
+  e.preventDefault();
+  form.classList.remove("visually-hidden");
+});
+btnFClose.addEventListener("click", function (e) {
+  e.preventDefault();
+  form.classList.add("visually-hidden");
+});
+
 $(".owl-carousel").owlCarousel({
   loop: true,
   margin: 10,
@@ -27,10 +40,13 @@ $(".owl-carousel").owlCarousel({
     0: {
       items: 1,
     },
-    600: {
-      items: 3,
+    768: {
+      items: 2,
     },
     1200: {
+      items: 3,
+    },
+    1400: {
       items: 4,
     },
   },
