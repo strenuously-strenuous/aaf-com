@@ -472,8 +472,7 @@ body #owl-01 .owl-next span {
   border: 3px solid transparent;
 }
 #owl-01 .card.p-4.position-relative.pt-5:hover {
-  
-border: 3px solid var(--pri2);
+  border: 3px solid var(--pri2);
 }
 
 #modal1 {
@@ -481,4 +480,35 @@ border: 3px solid var(--pri2);
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+#play {
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+  z-index: 999999;
+}
+
+#modal1 .modal-dialog {
+  max-width: 600px;
+  width: 100%;
+}
+#modal1 .owl-stage {
+  display:flex;
+  align-items: center;
+}
+
+#modal1 .owl-carousel {
+  display: flex;
+  align-items: center;
+}
+/* #modal1 .owl-carousel .item {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  height: 100%;
+} */
+
+#modal1 .owl-carousel img {
+  max-width: 100px;
 }

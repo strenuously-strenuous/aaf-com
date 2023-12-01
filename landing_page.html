@@ -86,21 +86,24 @@
     /> -->
 
     <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script> -->
-    <script src="assets/js/script.js" defer></script>
-
+    
     <!-- <link rel="stylesheet" defer href="assets/css/landing_page_style.css" /> -->
-
+    
     <script src="https://www.gstatic.com/charts/loader.js"></script>
     <!-- <script>
       google.charts.load('current', {packages: ['corechart']});
       google.charts.setOnLoadCallback(drawChart);
     </script> -->
-
+    
     <link rel="stylesheet" href="assets/css/main.css">
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
+    />
+    
+    <link href="https://vjs.zencdn.net/8.6.1/video-js.css" rel="stylesheet" />
+    
+    <script src="assets/js/script.js" defer></script>
   </head>
   <body class="position-relative">
      
@@ -428,10 +431,18 @@ days.
               >Apply Now!</a
             > -->
             </div>
-            <div class="col-12 col-xl-6 d-flex align-items-center justify-content-center">
+            <div class="position-relative col-xl-6 d-flex align-items-center justify-content-center">
+              <div id="play"  
+              class="position-absolute top-50 start-50 translate-middle">
+                <img 
+                width="100"
+                src="assets/video/play-button-icon-png-17.png" alt="">
+              </div>
               <video
-              poster="assets/video/Untitled design.jpg"
-              src="assets/video/edit-bg-circle-blue-aaf.mp4" class="w-100"></video>
+              id="player"
+              poster="assets/video/poster-main.png"
+              src="assets/video/edit-bg-circle-blue-aaf.mp4" 
+              class="w-100"></video>
             </div>
           </div>
          
@@ -603,7 +614,7 @@ one.
         </div>
 
         <div class="container">
-          <div class="owl-carousel owl-theme" id="owl-01">
+          <div class="owl-carousel owl-theme owl-01" id="owl-01">
             <div class="item py-5">
               <div class="card p-4 position-relative pt-5">
                 <div
@@ -757,7 +768,7 @@ one.
                   <h4 class="fw-bold">8.75% p.a. onwards</h4>
                   <div class="text-primary">ROI (Rate Of Interest)</div>
                   <hr />
-                  <h4 class="fw-bold">1% of the loan amountor Rs. 10,000 whichever is higher</h4>
+                  <h4 class="fw-bold fs-6">1% of the loan amountor Rs. 10,000 whichever is higher</h4>
                   <div class="text-primary">Processing Fees</div>
                   <hr />
                   <h4 class="fw-bold">30</h4>
@@ -1170,7 +1181,7 @@ one.
     </main>
     <section class="mt-5 pt-5">
       <div class="container">
-        <div class="owl-carousel owl-theme" id="owl-01">
+        <div class="owl-carousel owl-theme owl-02">
           <div class="item mb-5">
             <img
               src="assets/img/carousel-banners/WhatsApp Image 2023-11-23 at 19.22.56 (1).jpeg"
@@ -1227,44 +1238,78 @@ one.
 
       <div class="modal fade show visually-hidden
       " tabindex="-1" id="modal1"  aria-modal="true" role="dialog">
-        <div class="modal-dialog" role="document" style="max-width: 350px">
+        <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header d-lg-flex">
               <h4 class="modal-title">
-                <strong>Start Your Loan Process</strong>
+                <strong>Apply For Your Loan in Minutes!</strong>
               </h4>
               <button class="btn-close" id="btn-fclose" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
             </div>
             <form id="requestQuoteForm">
-              <div class="modal-body" style="margin-bottom: 0px; padding-bottom: 0px">
-                <div style="margin-bottom: 15px">
-                  <input type="text" id="requestQuoteFormName" class="form-control" placeholder="Enter your name" style="width: 100%">
+              <div class="modal-body mt-3 mb-5" style="margin-bottom: 0px; padding-bottom: 0px">
+                <div class="d-flex align-items-center mb-3">
+                  <label for="" class=" text-nowrap me-4 fs-6 fw-bold">Enter Your Required Amount:</label>
+                  <input type="text" id="requestQuoteFormName"  type="text"
+                  class="form-control"
+                  name="loanamount"
+                  aria-label="Amount"
+                  id="loan-amount"
+                  pattern="^[0-9a-zA-z]+(,[0-9a-zA-z]+){0,11}$"
+                  value="5,00,000" placeholder="">
                 </div>
-                <div style="margin-bottom: 15px">
-                  <input type="tel" id="requestQuoteFormMobile" class="form-control" placeholder="Enter your mobile" style="width: 100%">
+                <!-- <label for="" class=" text-nowrap me-4 fs-6 fw-bold mb-3">Enter Your Mobile No:</label> -->
+                <div class="input-group col-6">
+                  <span class="input-group-text">
+                    <i class="fa-solid fa-phone lg"></i>
+                  </span>
+                  <input
+                    type="tel"
+                    class="form-control"
+                    name="mobile"
+                  />
                 </div>
-                <div style="margin-bottom: 15px">
-                  <input type="email" id="requestQuoteFormEmail" class="form-control" placeholder="Enter your email" style="width: 100%">
-                </div>
-                <div style="margin-bottom: 15px">
-                  <select style="width: 100%; padding: 10px; color: grey" 
-                  class="form-select"
-                  id="requestQuoteFormSelect">
-                    <option value="default" selected="" disabled>Loan Type</option>
-                    <option value="Balance Transfer">
-                      Balance Transfer
-                    </option>
-                    <option value="Home Renovation Loan">Home Renovation Loan</option>
-                  </select>
-                </div>
-                <div style="margin-bottom: 15px">
-                  <textarea id="requestQuoteFormTextMessage" class="form-control" cols="24" style="width: 100%; padding: 10px; padding-bottom: 0px" placeholder="Enter your message"></textarea>
-                </div>
+              
               </div>
               <div class="modal-footer d-lg-flex justify-content-lg-center" style="border: 0; padding-top: 0">
-                <button class="btn btn-primary" type="submit" style="width: 100%; border-radius: 4px">
+                <button class="btn btn-dark py-2" type="submit" style="width: 100%; border-radius: 4px">
                   SUBMIT
                 </button>
+              </div>
+              <div class="modal-body">
+                <div>
+                  <i class="fa-solid fa-circle-check text-success"></i>
+
+                  Get Your Business Loan in just 3 Steps from Our NBFC/Lending Partners:</div>
+                <div class="owl-carousel owl-theme owl3" id="form-carousel">
+                  <div class="item">
+                    <img src="assets/img/aadhar-housing.png" alt="">
+                  </div>
+                  <div class="item">
+                    <img src="assets/img/aavas.png" alt="">
+                  </div>
+                  <div class="item">
+                    <img src="assets/img/gic-housing.png" alt="">
+                  </div>
+                  <div class="item">
+                    <img src="assets/img/piramal.png" alt="">
+                  </div>
+                  <div class="item">
+                    <img src="assets/img/utkarsh.jpg" alt="">
+                  </div>
+                  <div class="item">
+                    <img src="assets/img/icici.png" alt="">
+                  </div>
+                  <div class="item">
+                    <img src="assets/img/standard-chartered-bank-new-20211713.jpg" alt="">
+                  </div>
+                  <div class="item">
+                    <img src="assets/img/Square-1200x1200px.jpg" alt="">
+                  </div>
+                  <!-- <div class="item">
+                    <img src="assets/img/shriram-housing.avif" alt="">
+                  </div> -->
+                </div>
               </div>
             </form>
           </div>
@@ -1272,7 +1317,7 @@ one.
       </div>
       
       <div class="bg-band">
-        <div class="container my-5">
+        <div class="container mb-5">
           <div class="row flex-column-reverse flex-md-row gap-5 gap-md-0">
             <div
               class="col-12 col-md-6 d-flex flex-column justify-content-center align-items-start"
@@ -1436,7 +1481,8 @@ one.
                   <span> 30 </span>
                 </div>
               </div>
-              <a href="#form" class="btn btn-outline-dark mt-5 text-end"
+              <p class="muted mt-5 ">* loans starting from 8.40%</p>
+              <a id="requestQuoteButton2" class="btn btn-outline-dark  text-end"
                 >Apply Now</a
               >
             </div>
@@ -1447,19 +1493,19 @@ one.
                 Your monthly EMI is: <br> 
                 <span id="monthly-payment" class="fw-bold fs-1"></s>
               </div>
-              <div class="row text-center mt-5 pt-5">
-                <div class="col">
-                  Monthly Interest: <br>
-                  <span id="monthly-interest"></span>
+              <div class="row text-center mt-5 pt-5"> 
+                <div class="col fw-bold">
+                  Monthly Interest: <br> 
+                  <span id="monthly-interest" class="fw-bold fs-1"></span>
                 </div>
                 
                 <div class="col">
                   Total Interest: <br>
-                  <span id="total-interest"></span>
+                  <span id="total-interest" class="fw-bold fs-1"></span>
                 </div>
                 <div class="col">
                   Total Payment: <br>
-                  <span id="total-payment"></span>
+                  <span id="total-payment" class="fw-bold fs-1"></span>
                 </div>
               </div>
             </div>
@@ -1488,8 +1534,8 @@ one.
           // is3D: true,
           // title: 'Total Principal Amount: 100',
           pieHole: 0.4,
-          width:300,
-          height:300,
+          width:'100%',
+          height:'auto',
           // legend: "bottom",
           pieSliceText: 'label',
           backgroundColor: 'transparent',

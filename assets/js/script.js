@@ -19,23 +19,119 @@
 // interação do botão de autoriazação do formulário FIM
 
 let btnF = document.querySelector("#requestQuoteButton");
+let btnF2 = document.querySelector("#requestQuoteButton2");
 let btnFClose = document.querySelector("#btn-fclose");
 let form = document.querySelector("#modal1");
 
 btnF.addEventListener("click", function (e) {
   e.preventDefault();
   form.classList.remove("visually-hidden");
+  t01();
+});
+btnF2.addEventListener("click", function (e) {
+  e.preventDefault();
+  form.classList.remove("visually-hidden");
+  t01();
 });
 btnFClose.addEventListener("click", function (e) {
   e.preventDefault();
   form.classList.add("visually-hidden");
 });
 
-$(".owl-carousel").owlCarousel({
+function t01() {
+  $("#form-carousel").owlCarousel({
+    loop: true,
+    margin: 10,
+    nav: false,
+    dots: false,
+    autoplayTimeout: 2000,
+    autoplay: true,
+    responsive: {
+      0: {
+        items: 4,
+      },
+    },
+  });
+}
+
+// t01
+// function showModal() {
+
+//   $('.modal').on('show.bs.modal', function (event) {
+//    $('.owl-carousel').owlCarousel({
+//       loop: true,
+//       margin: 10,
+//       nav: true,
+//       navText: [
+//         "<i class='fa fa-caret-left'></i>",
+//         "<i class='fa fa-caret-right'></i>"
+//       ],
+//       autoplay: true,
+//       autoplayHoverPause: true,
+//       responsive: {
+//         0: {
+//           items: 1
+//         },
+//         600: {
+//           items: 3
+//         },
+//         1000: {
+//           items: 5
+//         }
+//       }
+//     })
+//   })
+//   $(".modal").modal("show");
+// }
+
+// t01
+
+// $("#owl-02").owlCarousel({
+//   loop: true,
+//   margin: 10,
+//   nav: true,
+//   autoplay: true,
+//   responsive: {
+//     0: {
+//       items: 1,
+//     },
+//     768: {
+//       items: 2,
+//     },
+//     1200: {
+//       items: 3,
+//     },
+//     1400: {
+//       items: 4,
+//     },
+//   },
+// });
+
+$(".owl-01").owlCarousel({
   loop: true,
   margin: 10,
   nav: true,
   autoplay: true,
+  responsive: {
+    0: {
+      items: 1,
+    },
+    768: {
+      items: 2,
+    },
+    1200: {
+      items: 3,
+    },
+    1400: {
+      items: 4,
+    },
+  },
+});
+
+$(".owl-02").owlCarousel({
+  loop: true,
+  autoplay: true,
+  margin: 10,
   responsive: {
     0: {
       items: 1,
@@ -60,6 +156,14 @@ window.addEventListener("scroll", function () {
   } else if (window.scrollY < 300) {
     wabtn_wrapper.classList.add("visually-hidden");
   }
+});
+
+let player = document.getElementById("player");
+let play = document.getElementById("play");
+
+play.addEventListener("click", function () {
+  player.play();
+  play.style.display = "none";
 });
 
 // emi calc
@@ -152,26 +256,26 @@ function calculation() {
 
 //
 
-var chart = new google.visualization.ChartWrapper({
-  chartType: "donut",
-  containerId: "myPieChart",
-  dataTable: [
-    ["Loan", "Loan Breakup"],
-    ["Loan Amount", 10],
-    ["Interest Rate", 10],
-    ["Loan Tenure", 10],
-    ["Total Payment", 10],
-    ["Total Interest", 60],
-  ],
-  options: {
-    height: 300,
-    width: 500,
-    pieHole: 0.4,
-    pieSliceText: "label",
-    pieSliceTextStyle: {
-      color: "black",
-    },
-    legend: "none",
-  },
-});
-chart.draw();
+// var chart = new google.visualization.ChartWrapper({
+//   chartType: "donut",
+//   containerId: "myPieChart",
+//   dataTable: [
+//     ["Loan", "Loan Breakup"],
+//     ["Loan Amount", 10],
+//     ["Interest Rate", 10],
+//     ["Loan Tenure", 10],
+//     ["Total Payment", 10],
+//     ["Total Interest", 60],
+//   ],
+//   options: {
+//     height: 300,
+//     width: 500,
+//     pieHole: 0.4,
+//     pieSliceText: "label",
+//     pieSliceTextStyle: {
+//       color: "black",
+//     },
+//     legend: "none",
+//   },
+// });
+// chart.draw();

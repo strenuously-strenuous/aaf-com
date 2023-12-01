@@ -34,6 +34,7 @@ $mycustom-dark: #495057;
   45%,
   55%,
   65% {
+    color: transparent;
     transform: rotate(10deg);
   }
   30%,
@@ -252,7 +253,9 @@ h2 {
 }
 
 #emi-chart {
-  background: var(--pri);
+  // background: var(--pri);
+  background: linear-gradient(160deg, #495057 0%, #000 100%);
+  color: white;
   // background: var(--mark0);
 }
 

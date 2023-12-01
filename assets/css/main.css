@@ -11995,6 +11995,7 @@ textarea.form-control-lg {
     transform: rotate(0deg);
   }
   35%, 45%, 55%, 65% {
+    color: transparent;
     transform: rotate(10deg);
   }
   30%, 40%, 50%, 60%, 75% {
@@ -12191,7 +12192,8 @@ h2, .h2 {
 }
 
 #emi-chart {
-  background: var(--pri);
+  background: linear-gradient(160deg, #495057 0%, #000 100%);
+  color: white;
 }
 
 #company-info {
