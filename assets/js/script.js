@@ -1,20 +1,48 @@
-// cd bar
-// const inputNumbers = document.querySelectorAll(".input-number");
-// const inputRanges = document.querySelectorAll(".input-range");
+// jsChart
+const ctx = document.getElementById("myPieChart").getContext("2d");
+const chart = new Chart(ctx, {
+  type: "doughnut",
+  data: {
+    labels: ["Loan Amount", "Interest", "Tenure", "EMI"],
+    datasets: [
+      {
+        label: "EMI Calculator",
+        data: [500000, 5, 1, 9436],
+        backgroundColor: ["#3366cc", "#990099", "rgb(255, 153, 0)", "#673ab7"],
+        hoverOffset: 4,
+      },
+    ],
+  },
+  options: {
+    responsive: true,
+    title: {
+      display: true,
+      text: "EMI Calculator Results",
+    },
+    plugins: {
+      legend: {
+        labels: {},
+        position: "bottom",
+        margin: 100,
+        display: false,
+      },
+    },
+  },
+});
 
-// Add event listeners to all input number and range elements
-// for (let i = 0; i < inputNumbers.length; i++) {
-//   inputNumbers[i].addEventListener("keyup", () => {
-//     const formattedNumber = parseFloat(inputNumbers[i].value).toLocaleString();
-//     inputNumbers[i].value = numeral(formattedNumber).format("0,0");
-//     inputRanges[i].value = inputNumbers[i].value;
-//   });
+//update on change
 
-//   inputRanges[i].addEventListener("input", () => {
-//     inputNumbers[i].value = numeral(inputRanges[i].value).format("0,0");
-//   });
-// }
-// cd bar
+function updateChart(loanAmount, interestPercentage, loanTenure, monthlyEMI) {
+  chart.data.datasets[0].data = [
+    loanAmount,
+    interestPercentage,
+    loanTenure,
+    monthlyEMI,
+  ];
+  chart.update();
+}
+
+// jsChart
 
 let btnF = document.querySelector("#requestQuoteButton");
 let btnF2 = document.querySelector("#requestQuoteButton2");
@@ -149,204 +177,16 @@ play.addEventListener("click", function () {
 });
 
 // emi calc
-function reset() {
-  document.getElementById("value1").value = 0;
-  document.getElementById("value2").value = 0;
-  document.getElementById("value3").value = 0;
+// function reset() {
+//   document.getElementById("value1").value = 0;
+//   document.getElementById("value2").value = 0;
+//   document.getElementById("value3").value = 0;
 
-  document.getElementById("monthly-interest").innerHTML = " $ " + 0;
-  document.getElementById("monthly-payment").innerHTML = " $ " + 0;
-  document.getElementById("total-repayment").innerHTML = " $ " + 0;
-  document.getElementById("total-interest").innerHTML = " $ " + 0;
-}
-
-// calculation();
-
-// document.querySelectorAll(".emi input").forEach((item) => {
-//   item.addEventListener("keypress", (event) => {
-//     calculation();
-//   });
-// });
-
-// function calculation() {
-//   // debugger;
-//   var loanAmount = document
-//     .getElementById("loan-amount")
-//     .value.replaceAll(",", "");
-//   var interestRate = document.getElementById("interest-rate").value;
-//   var loanDuration = document.getElementById("loan-tenure").value;
-
-//   //.......... declarations.............
-
-//   var interestPerYear = (loanAmount * interestRate) / 100;
-//   var monthlyInterest = interestPerYear / 12;
-
-//   var monthlyPayment = monthlyInterest + loanAmount / loanDuration;
-//   var totalInterestCost = monthlyInterest * loanDuration;
-//   var totalRepayment = monthlyPayment * loanDuration;
-
-//   //----------------monthly interest----------------------
-
-//   document.getElementById("monthly-interest").innerHTML = Math.ceil(
-//     monthlyInterest.toFixed(2)
-//   );
-
-//   //-------------Monthly payment------------
-
-//   document.getElementById("monthly-payment").innerHTML = Math.ceil(
-//     monthlyPayment.toFixed(2)
-//   );
-
-//   //-------------Total repayment-----------
-
-//   document.getElementById("total-payment").innerHTML = Math.ceil(
-//     totalRepayment.toFixed(2)
-//   );
-
-//   //--------------Total Interest cost----------------
-
-//   document.getElementById("total-interest").innerHTML = Math.ceil(
-//     totalInterestCost.toFixed(2)
-//   );
-
-// var data = google.visualization.arrayToDataTable([
-//   ["Loan", "Loan Breakup"],
-//   ["Loan Amount", loanAmount],
-//   ["Interest Rate", interestRate],
-//   ["Loan Tenure", loanDuration],
-//   ["Total Payment", totalRepayment.toFixed(2)],
-//   ["Total Interest", totalInterestCost.toFixed(2)],
-// ]);
-
-// chart.draw(data);
-
-// function drawVisualization() {
-//   var wrapper = new google.visualization.ChartWrapper({
-//     chartType: "ColumnChart",
-//     dataTable: [
-//       [ "Germany", "USA", "Brazil"],
-//       [ loanAmount, loanAmount, loanAmount],
-//     ],
-//     options: { title: "Countries" },
-//     containerId: "myPieChart",
-//   });
-//   wrapper.draw();
+//   document.getElementById("monthly-interest").innerHTML = " $ " + 0;
+//   document.getElementById("monthly-payment").innerHTML = " $ " + 0;
+//   document.getElementById("total-repayment").innerHTML = " $ " + 0;
+//   document.getElementById("total-interest").innerHTML = " $ " + 0;
 // }
-
-// drawVisualization();
-// }
-// emi calc
-
-//
-
-// var chart = new google.visualization.ChartWrapper({
-//   chartType: "donut",
-//   containerId: "myPieChart",
-//   dataTable: [
-//     ["Loan", "Loan Breakup"],
-//     ["Loan Amount", 10],
-//     ["Interest Rate", 10],
-//     ["Loan Tenure", 10],
-//     ["Total Payment", 10],
-//     ["Total Interest", 60],
-//   ],
-//   options: {
-//     height: 300,
-//     width: 500,
-//     pieHole: 0.4,
-//     pieSliceText: "label",
-//     pieSliceTextStyle: {
-//       color: "black",
-//     },
-//     legend: "none",
-//   },
-// });
-// chart.draw();
-
-// t01
-// for (let i = 0; i < inputNumbers.length; i++) {
-//   inputNumbers[i].addEventListener("keyup", () => {
-//     const formattedNumber = numeral(inputNumbers[i].value).format("0,0");
-//     inputNumbers[i].value = formattedNumber;
-//     inputRanges[i].value = formattedNumber;
-//     calculation();
-//   });
-
-//   inputRanges[i].addEventListener("input", () => {
-//     inputNumbers[i].value = numeral(inputRanges[i].value).format("0,0");
-//     calculation();
-//   });
-// }
-
-// document.querySelectorAll(".emi input").forEach((item) => {
-//   item.addEventListener("keypress", () => {
-//     calculation();
-//   });
-// });
-
-// function calculation() {
-//   // Get input values
-//   const loanAmount = parseFloat(
-//     document.getElementById("loan-amount").value.replaceAll(",", "")
-//   );
-//   const interestRate = parseFloat(
-//     document.getElementById("interest-rate").value
-//   );
-//   const loanDuration =
-//     parseFloat(document.getElementById("loan-tenure").value) / 12;
-
-//   console.log(loanDuration);
-
-//   // Calculate financial values
-//   const interestPerYear = (loanAmount * interestRate) / 100;
-//   const monthlyInterest = interestPerYear / 12;
-//   const monthlyPayment = monthlyInterest + loanAmount / loanDuration;
-//   const totalInterestCost = monthlyInterest * loanDuration;
-//   const totalRepayment = monthlyPayment * loanDuration;
-
-//   // ---------------- monthly interest ----------------------
-
-//   // document.getElementById("monthly-interest").innerHTML = Math.ceil(
-//   //   monthlyInterest.toFixed(2)
-//   // );
-
-//   // // ------------- Monthly payment ------------
-
-//   // document.getElementById("monthly-payment").innerHTML = Math.ceil(
-//   //   monthlyPayment.toFixed(2)
-//   // );
-//   // // ------------- Total repayment -----------
-
-//   // document.getElementById("total-payment").innerHTML = Math.ceil(
-//   //   totalRepayment.toFixed(2)
-//   // );
-
-//   // // -------------- Total Interest cost --------------
-
-//   // document.getElementById("total-interest").innerHTML = Math.ceil(
-//   //   totalInterestCost.toFixed(2)
-//   // );
-
-//   //   // Format and display results
-//   document.getElementById("monthly-interest").innerHTML = numeral(
-//     monthlyInterest.toFixed(2)
-//   ).format("Rs.0,0");
-//   document.getElementById("monthly-payment").innerHTML = numeral(
-//     monthlyPayment.toFixed(2)
-//   ).format("Rs.0,0");
-//   document.getElementById("total-payment").innerHTML = numeral(
-//     totalRepayment.toFixed(2)
-//   ).format("Rs.0,0");
-//   document.getElementById("total-interest").innerHTML = numeral(
-//     totalInterestCost.toFixed(2)
-//   ).format("Rs.0,0");
-// }
-
-// t01
-
-// to2
-
-// const numeral = require('numeral');
 
 const inputNumbers = document.querySelectorAll(".input-number");
 const inputRanges = document.querySelectorAll(".input-range");
@@ -404,25 +244,9 @@ function calculate() {
   document.getElementById("total-interest").innerHTML = numeral(
     totalInterestCost.toFixed(2)
   ).format("	'($0,0)'");
+
+  updateChart(loanAmount, interestRate, loanDurationMonths, emi);
 }
-
-// Update input values and trigger calculation on change
-// ["keyup", "input"].forEach((event) => {
-//   for (const [i, input] of [...inputNumbers, ...inputRanges].entries()) {
-//     input.addEventListener(event, () => {
-//       const formattedNumber = numeral(input.value).format("0,0");
-
-//       if (input.type === "range") {
-//         inputNumbers[i].value = formattedNumber;
-//         calculate();
-//       } else {
-//         input.value = formattedNumber;
-//         inputRanges[i].value = formattedNumber;
-//         calculate();
-//       }
-//     });
-//   }
-// });
 
 for (let i = 0; i < inputNumbers.length; i++) {
   inputNumbers[i].addEventListener("keyup", () => {

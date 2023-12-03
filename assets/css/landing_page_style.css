@@ -513,9 +513,14 @@ body #owl-01 .owl-next span {
   max-width: 100px;
 }
 
-#emi-chart {
+/* #emi-chart {
   max-height: 950px;
   overflow-x: hidden;
+} */
+
+canvas {
+  max-width: 500px;
+  max-height: 500px;
 }
 
 @media (min-width: 1310px) {

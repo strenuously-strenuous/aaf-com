@@ -89,7 +89,7 @@
     
     <!-- <link rel="stylesheet" defer href="assets/css/landing_page_style.css" /> -->
     
-    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <!-- <script src="https://www.gstatic.com/charts/loader.js"></script> -->
     <!-- <script>
       google.charts.load('current', {packages: ['corechart']});
       google.charts.setOnLoadCallback(drawChart);
@@ -104,7 +104,10 @@
     <link href="https://vjs.zencdn.net/8.6.1/video-js.css" rel="stylesheet" />
     
     <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.0/dist/chart.min.js"></script>
+    
     <script src="assets/js/script.js" defer></script>
+
 
   </head>
   <body class="position-relative">
@@ -1517,29 +1520,31 @@ one.
                 Your monthly EMI is: <br> 
                 <span id="monthly-payment" class="fw-bold fs-1"></s>
               </div>
-              <div class="row text-center mt-5 pt-5"> 
-                <div class="col fw-bold">
+              <div class="row text-center pt-5 mt-4 g-5"> 
+                <div class="col text-nowrap">
                   Monthly Interest: <br> 
                   <span id="monthly-interest" class="fw-bold fs-1"></span>
                 </div>
                 
-                <div class="col">
+                <div class="col text-nowrap">
                   Total Interest: <br>
                   <span id="total-interest" class="fw-bold fs-1"></span>
                 </div>
-                <div class="col">
+                <div class="col text-nowrap">
                   Total Payment: <br>
                   <span id="total-payment" class="fw-bold fs-1"></span>
                 </div>
               </div>
             </div>
-            <div id="myPieChart" class="h-100 w-100 d-flex  justify-content-center"></div>
+            <div class="h-100 w-100 d-flex mt-5  justify-content-center">
+              <canvas id="myPieChart"></canvas>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <script>
+    <!-- <script>
       google.charts.load("current", { packages: ["corechart"] });
       google.charts.setOnLoadCallback(drawChart);
 
@@ -1575,7 +1580,7 @@ one.
 
         chart.draw(data, options);
       }
-    </script>
+    </script> -->
 
     <footer class="text-center bg-dark py-5 text-white">
       <div class="container">
