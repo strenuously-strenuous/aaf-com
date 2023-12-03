@@ -494,7 +494,7 @@ body #owl-01 .owl-next span {
   width: 100%;
 }
 #modal1 .owl-stage {
-  display:flex;
+  display: flex;
   align-items: center;
 }
 
@@ -511,4 +511,20 @@ body #owl-01 .owl-next span {
 
 #modal1 .owl-carousel img {
   max-width: 100px;
+}
+
+#emi-chart {
+  max-height: 950px;
+  overflow-x: hidden;
+}
+
+@media (min-width: 1310px) {
+  label.card-radio-btn.my-2 {
+    width: 216px !important;
+  }
+}
+@media (min-width: 0) {
+  label.card-radio-btn.my-2 {
+    width: 100%;
+  }
 }
