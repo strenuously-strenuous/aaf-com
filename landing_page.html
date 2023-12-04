@@ -462,7 +462,6 @@ Great Pre-approved Best Home Loan instantly.
               <video
               id="player"
               poster="assets/img/final-video-poster.png"
-              src="assets/video/final-video.mp4" 
               class="w-100"></video>
             </div>
           </div>
@@ -1016,7 +1015,7 @@ one.
                   />
                 </div>
                 <div class="card-header bg-white border-0 mt-3">
-                  <h4 class="fw-bold">9.5% p.a. onwards</h4>
+                  <h4 class="fw-bold">8.75% p.a. onwards</h4>
                   <div class="text-primary">ROI (Rate Of Interest)</div>
                   <hr />
                   <h4 class="fw-bold">0.50 onwards</h4>
@@ -1102,7 +1101,7 @@ one.
                   class="card-img-top top-0 position-absolute translate-middle-y bg-white"
                 >
                   <img
-                  src="assets/img/hero-fincorp.png"
+                  src="assets/img/hero-housing-finance.png"
                     class="card-img-top ms-3"
                     alt=""
                   />
@@ -1271,9 +1270,9 @@ one.
               <div class="modal-body mt-3 mb-5" style="margin-bottom: 0px; padding-bottom: 0px">
                 <div class="d-flex align-items-center mb-3">
                   <label for="" class=" text-nowrap me-4 fs-6 fw-bold">Enter Your Required Amount:</label>
-                  <input type="text" id="requestQuoteFormName"  type="text"
+                  <input type="text" id="loanAmount"  type="text"
                   class="form-control"
-                  name="loanamount"
+                  name="loanAmount"
                   aria-label="Amount"
                   id="loan-amount"
                   pattern="^[0-9a-zA-z]+(,[0-9a-zA-z]+){0,11}$"
@@ -1288,6 +1287,7 @@ one.
                     type="tel"
                     class="form-control"
                     name="mobile"
+                    id="mobile"
                   />
                 </div>
               
@@ -1296,6 +1296,10 @@ one.
                 <button class="btn btn-dark py-2" type="submit" style="width: 100%; border-radius: 4px">
                   SUBMIT
                 </button>
+              </div>
+              <div>
+                <p class="visually-hidden alert alert-warning small" id="success-message">Thank You for contacting All About Finances. Our Company Executive will call you shortly</p>
+                <p class="visually-hidden alert alert-danger small" id="error-message">Failed. Try again later or contact on the given numbers.</p>
               </div>
               <div class="modal-body">
                 <div>
@@ -1521,10 +1525,10 @@ one.
                 <span id="monthly-payment" class="fw-bold fs-1"></s>
               </div>
               <div class="row text-center pt-5 mt-4 g-5"> 
-                <div class="col text-nowrap">
+                <!-- <div class="col text-nowrap">
                   Monthly Interest: <br> 
                   <span id="monthly-interest" class="fw-bold fs-1"></span>
-                </div>
+                </div> -->
                 
                 <div class="col text-nowrap">
                   Total Interest: <br>

@@ -172,8 +172,11 @@ let player = document.getElementById("player");
 let play = document.getElementById("play");
 
 play.addEventListener("click", function () {
-  player.play();
-  play.style.display = "none";
+  player.setAttribute("src", "assets/video/final-video.mp4");
+  if (player.hasAttribute("src")) {
+    player.play();
+    play.style.display = "none";
+  }
 });
 
 // emi calc
@@ -232,9 +235,9 @@ function calculate() {
 
   const monthlyInterestAmount = emi * monthlyInterestRate;
 
-  document.getElementById("monthly-interest").innerHTML = numeral(
-    monthlyInterestAmount.toFixed(2)
-  ).format("	'($0,0)'");
+  // document.getElementById("monthly-interest").innerHTML = numeral(
+  //   monthlyInterestAmount.toFixed(2)
+  // ).format("	'($0,0)'");
   document.getElementById("monthly-payment").innerHTML = numeral(
     emi.toFixed(0)
   ).format("	'($0,0)'");
@@ -273,5 +276,106 @@ updateRangeValues();
 
 // Calculate initial values
 calculate();
-
 // to2
+
+// form submit
+// const enquiryForm = document.getElementById("requestQuoteForm");
+// let enquiryForm_h1 = document.querySelector("h4.modal-title");
+
+// enquiryForm.addEventListener("submit", function (e) {
+//   e.preventDefault();
+//   const loanAmount = document.getElementById("loanAmount").value;
+//   const mobile = document.getElementById("mobile").value;
+//   const data = {
+//     mobile,
+//     loanAmount,
+//   };
+//   fetch("https://api.agify.io/?name=meelad").then((res) => {
+//     if (res.status === 200) {
+//       document
+//         .getElementById("success-message")
+//         .classList.remove("visually-hidden");
+//       } else {
+//         .getElementById("error-message")
+//         .classList.remove("visually-hidden");
+//       }
+//   });
+// });
+// form submit
+
+// bform
+const enquiryForm = document.getElementById("requestQuoteForm");
+let enquiryForm_h1 = document.querySelector("h4.modal-title");
+
+enquiryForm.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  // Validate user input
+  const loanAmountInput = document
+    .getElementById("loanAmount")
+    .value.replaceAll(",", "");
+  console.log(loanAmountInput);
+  const mobileInput = document.getElementById("mobile");
+
+  if (!validateLoanAmount(loanAmountInput)) {
+    showError("Invalid loan amount. Please enter a valid amount.");
+    return;
+  }
+
+  if (!validateMobileNumber(mobileInput.value)) {
+    showError("Invalid mobile number. Please enter a 10-digit mobile number.");
+    return;
+  }
+
+  const loanAmount = loanAmountInput;
+
+  const mobile = mobileInput.value;
+
+  const data = {
+    mobile,
+    loanAmount,
+  };
+
+  // Send data to the server using a secure POST request
+  fetch("https://www.boredapi.com/api/activity", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  }).then((res) => {
+    if (res.status === 200) {
+      document
+        .getElementById("success-message")
+        .classList.remove("visually-hidden");
+      document.getElementById("error-message").classList.add("visually-hidden");
+    } else {
+      document
+        .getElementById("error-message")
+        .classList.remove("visually-hidden");
+      document
+        .getElementById("success-message")
+        .classList.add("visually-hidden");
+    }
+  });
+});
+
+function validateLoanAmount(loanAmount) {
+  if (isNaN(loanAmount) || parseInt(loanAmount) < 0) {
+    return false;
+  }
+  return true;
+}
+
+function validateMobileNumber(mobileNumber) {
+  if (mobileNumber.length !== 10 || isNaN(mobileNumber)) {
+    return false;
+  }
+  return true;
+}
+
+function showError(errorMessage) {
+  alert(errorMessage);
+}
+
+// bform
