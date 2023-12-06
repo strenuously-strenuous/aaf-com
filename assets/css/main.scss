@@ -257,6 +257,9 @@ h2 {
   background: linear-gradient(160deg, #495057 0%, #000 100%);
   color: white;
   // background: var(--mark0);
+  // background: url(../img/emi-calc-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #company-info {
@@ -276,6 +279,7 @@ h2 {
   background-color: var(--pri) !important;
 }
 
-body #owl-01 .owl-prev, body #owl-01 .owl-next {
+body #owl-01 .owl-prev,
+body #owl-01 .owl-next {
   display: flex;
 }

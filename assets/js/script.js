@@ -27,6 +27,14 @@ const chart = new Chart(ctx, {
         display: false,
       },
     },
+    layout: {
+      padding: {
+        left: 10,
+        right: 10,
+        top: 10,
+        bottom: 10,
+      },
+    },
   },
 });
 
@@ -253,14 +261,14 @@ function calculate() {
 
 for (let i = 0; i < inputNumbers.length; i++) {
   inputNumbers[i].addEventListener("keyup", () => {
-    const formattedNumber = numeral(inputNumbers[i].value).format("0,0");
+    const formattedNumber = numeral(inputNumbers[i].value).format("0,0[.]0");
     inputNumbers[i].value = formattedNumber;
     inputRanges[i].value = formattedNumber;
     calculate();
   });
 
   inputRanges[i].addEventListener("input", () => {
-    inputNumbers[i].value = numeral(inputRanges[i].value).format("0,0");
+    inputNumbers[i].value = numeral(inputRanges[i].value).format("0,0[.]0");
     calculate();
   });
 }
