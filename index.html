@@ -26,12 +26,17 @@
             <img src="https://allaboutfinances.in/ad_campaigns/assets/img/final-sec-brand.png" width="300"></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item d-xxl-flex align-items-xxl-center">
+                    <li class="nav-item d-xxl-flex align-items-xxl-center mx-2">
                         <div class="nav-item dropdown"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#">Loans</a>
-                            <div class="dropdown-menu"><a class="dropdown-item" href="#">Personal Loan</a><a class="dropdown-item" href="#">Business Loan</a><a class="dropdown-item" href="#">Home Loan</a><a class="dropdown-item" href="#">Balance Transfer</a><a class="dropdown-item" href="#">Loan Against Property</a><a class="dropdown-item" href="#">Gold Loan</a></div>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="home-loan.html">Home Loan</a>
+                                <a class="dropdown-item" href="#">Loan Against Property</a>
+                                <a class="dropdown-item" href="#">Balance Transfer</a>
+                                <a class="dropdown-item" href="#">Renovation Loan</a>
+                            </div>
                         </div>
                     </li>
-                    <li class="nav-item d-xxl-flex align-items-xxl-center">
+                    <li class="nav-item d-xxl-flex align-items-xxl-center mx-2">
                         <div class="nav-item dropdown"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#">Financial Tools</a>
                             <div class="dropdown-menu"><a class="dropdown-item" href="#">EMI calculator</a><a class="dropdown-item" href="#">Eligibility Check</a><a class="dropdown-item" href="#">PMAY</a><a class="dropdown-item" href="#">Repay Right</a><a class="dropdown-item" href="#">Track Your application</a></div>
                         </div>
@@ -60,17 +65,92 @@
                     </div>
                 </div>
                 <div class="col-md-6 mb-4">
-                    <div class="p-5 mx-lg-5" style="background: url(&quot;assets/img/blob.svg&quot;) center / contain no-repeat;"><img class="rounded img-fluid shadow w-100 fit-cover" style="min-height: 300px;" src="assets/img/undraw_Relaxing_at_home_re_mror.png"></div>
+                    <div class="p-5 mx-lg-5" ><img class="rounded img-fluid w-100 object-fit-contain" style="min-height: 300px;" src="assets/img/image-removebg-preview (2).png"></div>
                 </div>
             </div>
         </div>
     </header>
+
+
     <section class="py-5">
+        <div class="container text-center py-5">
+            <h2 class="mb-5 " style="font-size: 1.6rem;">Top-rated on <span class="text-success"><strong>Google, Sulekha, and Justdial</strong></span></h2>
+            <div class="row pt-4 row-cols-md-3 d-lg-flex mx-auto justify-content-lg-center " style="max-width: 100%;">
+                <div class="col mb-4 d-flex justify-content-center align-items-center bg-white" style="max-width: 250px;">
+                    <img class="w-100 img-m-250" src="assets/img/google-review.png" alt="" >
+                </div>
+                <div class="col mb-4 d-flex justify-content-center align-items-center bg-white" style="max-width: 250px;">
+                    <img class="w-100 img-m-250" src="assets/img/sulekha2-removebg-preview (1).png" alt="" >
+                </div>
+                <div class="col mb-4 d-flex justify-content-center align-items-center bg-white" style="max-width: 250px;">
+                    <img class="w-100 img-m-250" src="assets/img/jd.png" alt="" >
+                </div>
+             
+            </div>
+        </div>
+    </section>
+
+
+    <div class="container-fluid mb-5 pb-5 bg-dark py-5 ">
+        <h2 class="mb-5 text-center pt-5 mt-5" style="font-size: 1.6rem;">Associated with top lending 
+            <span class="text-success"><strong>Banks & NBFC's</strong></span></h2>
+        <div class="swiper banksSwiper mb-5 pb-5">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide d-flex align-items-center justify-content-center bg-white">
+                    <img class="img-fluid" src="assets/img/kotak.jpg" alt="">
+                </div>
+                <div class="swiper-slide d-flex align-items-center justify-content-center bg-white">
+                    <img class="img-fluid" src="assets/img/sbi.webp" alt="">
+                </div>
+                <div class="swiper-slide d-flex align-items-center justify-content-center bg-white">
+                    <img class="img-fluid" src="assets/img/hdfc.webp" alt="">
+                </div>
+                <div class="swiper-slide d-flex align-items-center justify-content-center bg-white">
+                    <img class="img-fluid" src="assets/img/lichfl.jpg" alt="">
+                </div>
+                <div class="swiper-slide d-flex align-items-center justify-content-center bg-white">
+                    <img class="img-fluid" src="assets/img/hdfc.webp" alt="">
+                </div>
+                <div class="swiper-slide d-flex align-items-center justify-content-center bg-white">
+                    <img class="img-fluid" src="assets/img/axis-bank-logo.jpg" alt="">
+                </div>
+                <div class="swiper-slide d-flex align-items-center justify-content-center bg-white">
+                    <img class="img-fluid" src="assets/img/idfc.jpg" alt="">
+                </div>
+                <div class="swiper-slide d-flex align-items-center justify-content-center bg-white">
+                    <img class="img-fluid" src="assets/img/Square-1200x1200px.jpg" alt="">
+                </div>
+              
+            </div>
+            <!-- <div class="swiper-pagination"></div> -->
+        </div>
+    </div>
+    <script>
+        window.addEventListener('load', ()=> {
+
+            var swiper_banks = new Swiper(".banksSwiper", {
+              slidesPerView: 3,
+              loop: true,
+              autoplay: {
+                delay: 1000,
+                },
+              spaceBetween: 30,
+              pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+              },
+            });
+        })
+      </script>
+
+
+
+    <!-- <section class="py-5">
         <div class="container text-center py-5">
             <p class="mb-5" style="font-size: 1.6rem;">Trusted by&nbsp;<span class="text-success"><strong>thousands of people</strong></span>&nbsp;for all their finance needs.</p>
             <div class="row row-cols-md-3 d-lg-flex mx-auto justify-content-lg-center" style="max-width: 100%;">
                 <div class="col mb-4" style="max-width: 250px;">
-                    <div class="text-center"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-emoji-smile fs-2 mb-3">
+                    <div class="text-center"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-emoji-smile fs-2 mb-3 text-success">
                             <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
                             <path d="M4.285 9.567a.5.5 0 0 1 .683.183A3.498 3.498 0 0 0 8 11.5a3.498 3.498 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.498 4.498 0 0 1 8 12.5a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .183-.683zM7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zm4 0c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5z"></path>
                         </svg>
@@ -79,7 +159,7 @@
                     </div>
                 </div>
                 <div class="col mb-4" style="max-width: 250px;">
-                    <div class="text-center"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-house fs-2 mb-3">
+                    <div class="text-center"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-house fs-2 mb-3 text-success">
                             <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z"></path>
                         </svg>
                         <h5 class="fw-bold mb-0">2000 +</h5>
@@ -87,7 +167,7 @@
                     </div>
                 </div>
                 <div class="col mb-4" style="max-width: 250px;">
-                    <div class="text-center"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-briefcase fs-2 mb-3">
+                    <div class="text-center"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-briefcase fs-2 mb-3 text-success">
                             <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5zm1.886 6.914L15 7.151V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0zM1.5 4h13a.5.5 0 0 1 .5.5v1.616L8.129 7.948a.5.5 0 0 1-.258 0L1 6.116V4.5a.5.5 0 0 1 .5-.5z"></path>
                         </svg>
                         <h5 class="fw-bold mb-0">20 +</h5>
@@ -95,7 +175,7 @@
                     </div>
                 </div>
                 <div class="col mb-4" style="max-width: 250px;">
-                    <div class="text-center"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-buildings fs-2 mb-3">
+                    <div class="text-center"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-buildings fs-2 mb-3 text-success">
                             <path d="M14.763.075A.5.5 0 0 1 15 .5v15a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V14h-1v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V10a.5.5 0 0 1 .342-.474L6 7.64V4.5a.5.5 0 0 1 .276-.447l8-4a.5.5 0 0 1 .487.022ZM6 8.694 1 10.36V15h5V8.694ZM7 15h2v-1.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5V15h2V1.309l-7 3.5V15Z"></path>
                             <path d="M2 11h1v1H2v-1Zm2 0h1v1H4v-1Zm-2 2h1v1H2v-1Zm2 0h1v1H4v-1Zm4-4h1v1H8V9Zm2 0h1v1h-1V9Zm-2 2h1v1H8v-1Zm2 0h1v1h-1v-1Zm2-2h1v1h-1V9Zm0 2h1v1h-1v-1ZM8 7h1v1H8V7Zm2 0h1v1h-1V7Zm2 0h1v1h-1V7ZM8 5h1v1H8V5Zm2 0h1v1h-1V5Zm2 0h1v1h-1V5Zm0-2h1v1h-1V3Z"></path>
                         </svg>
@@ -105,8 +185,9 @@
                 </div>
             </div>
         </div>
-    </section>
-    <section class="" id="bg-dif">
+    </section> -->
+
+    <!-- <section class="" id="bg-dif">
         <div>
             <div class="container py-5">
                 <div class="row ">
@@ -122,7 +203,48 @@
                 </div>
             </div>
         </div>
+    </section> -->
+
+    
+
+    <section class="py-5 my-5">
+            <div class="container py-5 my-5">
+                <div class="row px-5">
+                    <div class="col-12 col-md-6">
+                        <h2 class="display-6  mb-5 fw-bold">
+                            Why choose
+                            <br>
+                            <span class="d-inline-block position-relative  text-success">
+                                AllAboutFinances?
+                            <!-- <img class="position-absolute top-100 start-0"
+                            width="150"
+                            style="rotate: 10deg"
+                            src="assets/img/b-stroke-removebg-preview.png" alt=""> -->
+                            <!-- <img class="position-absolute top-100 start-0"
+                            width="150"
+                            style="rotate: 10deg"
+                            src="assets/img/b-stroke-removebg-preview.png" alt=""> -->
+                            </span>
+
+                        </h2>
+                        
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <!-- <h3 class="fs-4 mb-4">
+                            
+                            </h3> -->
+                            <p>
+                                All About Finances is a lending market place.
+                                It provides best interest rates on Home Loans from leading Banks and NBFCs. We help to get Home Loans in all areas of Delhi-NCR. Get all types of Properties finance through us like D.D.A Properties, Municipal Properties, Flats, Builder Floors, Gram Panchayat, Lal Dora, Regularised Area.
+                            </p>
+                    </div>
+                </div>
+            </div>
     </section>
+
+    
+
+
     <section class="pt-5 bg-dark">
         <div class="container bg-dark py-5 bg-transparent">
             <div class="row">
@@ -214,29 +336,38 @@
             </div>
         </div>
     </section>
+
     <section>
-        <div class="container py-5">
-            <h3 class="text-center mb-5 hightlight-heading fw-bold">Why Choose Us?</h3>
+        <div class="container my-5">
+            <!-- <h3 class="text-center hightlight-heading fw-bold">Why Choose Us?</h3> -->
             <div class="mx-auto py-5" style="/*max-width: 900px;*/">
                 <div class="row row-cols-1 row-cols-md-2 row row-cols-1 row-cols-md-4">
                     <div class="col mb-4">
                         <div class="card bg-primary-light">
-                            <div class="card-body text-center px-4 py-5 px-md-5"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-clock-history fs-1 mb-4">
-                                    <path d="M8.515 1.019A7 7 0 0 0 8 1V0a8 8 0 0 1 .589.022l-.074.997zm2.004.45a7.003 7.003 0 0 0-.985-.299l.219-.976c.383.086.76.2 1.126.342l-.36.933zm1.37.71a7.01 7.01 0 0 0-.439-.27l.493-.87a8.025 8.025 0 0 1 .979.654l-.615.789a6.996 6.996 0 0 0-.418-.302zm1.834 1.79a6.99 6.99 0 0 0-.653-.796l.724-.69c.27.285.52.59.747.91l-.818.576zm.744 1.352a7.08 7.08 0 0 0-.214-.468l.893-.45a7.976 7.976 0 0 1 .45 1.088l-.95.313a7.023 7.023 0 0 0-.179-.483zm.53 2.507a6.991 6.991 0 0 0-.1-1.025l.985-.17c.067.386.106.778.116 1.17l-1 .025zm-.131 1.538c.033-.17.06-.339.081-.51l.993.123a7.957 7.957 0 0 1-.23 1.155l-.964-.267c.046-.165.086-.332.12-.501zm-.952 2.379c.184-.29.346-.594.486-.908l.914.405c-.16.36-.345.706-.555 1.038l-.845-.535zm-.964 1.205c.122-.122.239-.248.35-.378l.758.653a8.073 8.073 0 0 1-.401.432l-.707-.707z"></path>
-                                    <path d="M8 1a7 7 0 1 0 4.95 11.95l.707.707A8.001 8.001 0 1 1 8 0v1z"></path>
-                                    <path d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5z"></path>
+                            <div class="card-body text-center px-4 py-5 px-md-5">
+                                
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-bootstrap-reboot fs-1 mb-4">
+                                    <path d="M1.161 8a6.84 6.84 0 1 0 6.842-6.84.58.58 0 1 1 0-1.16 8 8 0 1 1-6.556 3.412l-.663-.577a.58.58 0 0 1 .227-.997l2.52-.69a.58.58 0 0 1 .728.633l-.332 2.592a.58.58 0 0 1-.956.364l-.643-.56A6.812 6.812 0 0 0 1.16 8z"></path>
+                                    <path d="M6.641 11.671V8.843h1.57l1.498 2.828h1.314L9.377 8.665c.897-.3 1.427-1.106 1.427-2.1 0-1.37-.943-2.246-2.456-2.246H5.5v7.352h1.141zm0-3.75V5.277h1.57c.881 0 1.416.499 1.416 1.32 0 .84-.504 1.324-1.386 1.324h-1.6z"></path>
                                 </svg>
-                                <h5 class="fw-bold card-title mb-3">24/7 Customer<br>Support</h5>
+                                
+                                
+                              
+                                <h5 class="fw-bold card-title mb-3">Lowest <br> Interest Rate                                </h5>
+                                <!-- <p class="small">Lorem ipsum dolor sit amet consectetur adipisicing.</p> -->
                             </div>
                         </div>
                     </div>
                     <div class="col mb-4">
                         <div class="card bg-primary-light">
-                            <div class="card-body text-center px-4 py-5 px-md-5"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-bootstrap-reboot fs-1 mb-4">
-                                    <path d="M1.161 8a6.84 6.84 0 1 0 6.842-6.84.58.58 0 1 1 0-1.16 8 8 0 1 1-6.556 3.412l-.663-.577a.58.58 0 0 1 .227-.997l2.52-.69a.58.58 0 0 1 .728.633l-.332 2.592a.58.58 0 0 1-.956.364l-.643-.56A6.812 6.812 0 0 0 1.16 8z"></path>
-                                    <path d="M6.641 11.671V8.843h1.57l1.498 2.828h1.314L9.377 8.665c.897-.3 1.427-1.106 1.427-2.1 0-1.37-.943-2.246-2.456-2.246H5.5v7.352h1.141zm0-3.75V5.277h1.57c.881 0 1.416.499 1.416 1.32 0 .84-.504 1.324-1.386 1.324h-1.6z"></path>
+                            <div class="card-body text-center px-4 py-5 px-md-5">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-clock-history fs-1 mb-4">
+                                    <path d="M8.515 1.019A7 7 0 0 0 8 1V0a8 8 0 0 1 .589.022l-.074.997zm2.004.45a7.003 7.003 0 0 0-.985-.299l.219-.976c.383.086.76.2 1.126.342l-.36.933zm1.37.71a7.01 7.01 0 0 0-.439-.27l.493-.87a8.025 8.025 0 0 1 .979.654l-.615.789a6.996 6.996 0 0 0-.418-.302zm1.834 1.79a6.99 6.99 0 0 0-.653-.796l.724-.69c.27.285.52.59.747.91l-.818.576zm.744 1.352a7.08 7.08 0 0 0-.214-.468l.893-.45a7.976 7.976 0 0 1 .45 1.088l-.95.313a7.023 7.023 0 0 0-.179-.483zm.53 2.507a6.991 6.991 0 0 0-.1-1.025l.985-.17c.067.386.106.778.116 1.17l-1 .025zm-.131 1.538c.033-.17.06-.339.081-.51l.993.123a7.957 7.957 0 0 1-.23 1.155l-.964-.267c.046-.165.086-.332.12-.501zm-.952 2.379c.184-.29.346-.594.486-.908l.914.405c-.16.36-.345.706-.555 1.038l-.845-.535zm-.964 1.205c.122-.122.239-.248.35-.378l.758.653a8.073 8.073 0 0 1-.401.432l-.707-.707z"></path>
+                                    <path d="M8 1a7 7 0 1 0 4.95 11.95l.707.707A8.001 8.001 0 1 1 8 0v1z"></path>
+                                    <path d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5z"></path>
                                 </svg>
-                                <h5 class="fw-bold card-title mb-3">Lowest<br>Emi</h5>
+                                <h5 class="fw-bold card-title mb-3">Affordable <br> EMI plans
+                                </h5>
                             </div>
                         </div>
                     </div>
@@ -246,7 +377,8 @@
                                     <path d="M8.5 10c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1z"></path>
                                     <path d="M10.828.122A.5.5 0 0 1 11 .5V1h.5A1.5 1.5 0 0 1 13 2.5V15h1.5a.5.5 0 0 1 0 1h-13a.5.5 0 0 1 0-1H3V1.5a.5.5 0 0 1 .43-.495l7-1a.5.5 0 0 1 .398.117zM11.5 2H11v13h1V2.5a.5.5 0 0 0-.5-.5zM4 1.934V15h6V1.077l-6 .857z"></path>
                                 </svg>
-                                <h5 class="fw-bold card-title mb-3">Doorstep<br>Services</h5>
+                                <h5 class="fw-bold card-title mb-3">No Foreclosure Charge
+                                </h5>
                             </div>
                         </div>
                     </div>
@@ -278,7 +410,7 @@
                     <p class="text-muted">From business expansion to home improvement, we have the loan for you.</p>
                 </div>
             </div><!-- Slider main container -->
-<div class="swiper">
+<div class="swiper swiper-testimonials">
   <!-- Additional required wrapper -->
   <div class="swiper-wrapper">
     <!-- Slides -->
@@ -399,7 +531,7 @@
 </style>
 
 <script>
-    const swiper = new Swiper('.swiper', {
+    const swiper = new Swiper('.swiper-testimonials', {
   // Optional parameters
   loop: true,
          effect: "cube",
@@ -541,8 +673,8 @@
                     <ul class="list-unstyled">
                         <li><a href="#">EMI calculator</a></li>
                         <li><a href="#">Eligibility Check</a></li>
-                        <li><a href="#">PMAY</a></li>
-                        <li><a href="#">Repay Right</a></li>
+                        
+                        
                         <li><a href="#">Track Your application</a></li>
                     </ul>
                 </div>
