@@ -46,3 +46,58 @@ header img {
   align-items: stretch;
   justify-content: stretch;
 } */
+
+.nav-link:focus-visible {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block !important;
+}
+
+.interest .swiper img {
+  -o-object-fit: contain;
+  object-fit: contain;
+  height: 100% !important;
+  /* max-width: 100%; */
+  width: 200px !important;
+}
+
+.interest .swiper .card > :first-child {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  height: 80px;
+  max-width: 100%;
+  width: 220px;
+  border-radius: 25px;
+  /* border: 1px solid #aaa; */
+  overflow: hidden;
+  left: 50%;
+  translate: -50%;
+}
+
+#swiper-01 .card.p-4.position-relative.pt-5 {
+  height: 100%;
+  border: 3px solid transparent;
+}
+
+/* .interest {
+  background-color: #f8f8f8;
+} */
+
+#swiper-01 .card.p-4.position-relative.pt-5 {
+  height: 100% !important;
+  border: 3px solid transparent;
+  background-color: white;
+}
+
+.interest .swiper-slide {
+  height: auto;
+}
+.card-header.bg-white.border-0.mt-3 {
+  background-color: white;
+  height: 100%;
+}

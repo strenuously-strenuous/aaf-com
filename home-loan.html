@@ -18,15 +18,17 @@
 />
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script defer src="assets/js/common.js"></script>
+
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md sticky-top bg-dark py-3 navbar-dark" id="mainNav">
+    <nav class="navbar navbar-expand-lg sticky-top bg-dark py-3 navbar-dark" id="mainNav">
         <div class="container"><a class="navbar-brand d-flex align-items-center" href="/">
             <img src="https://allaboutfinances.in/ad_campaigns/assets/img/final-sec-brand.png" width="300"></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item d-xxl-flex align-items-xxl-center mx-2">
+                    <li class="nav-item d-xxl-flex align-items-xxl-center me-2">
                         <div class="nav-item dropdown"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#">Loans</a>
                           <div class="dropdown-menu">
                             <a class="dropdown-item" href="home-loan.html">Home Loan</a>
@@ -36,7 +38,7 @@
                         </div>
                         </div>
                     </li>
-                    <li class="nav-item d-xxl-flex align-items-xxl-center mx-2">
+                    <li class="nav-item d-xxl-flex align-items-xxl-center me-2">
                         <div class="nav-item dropdown"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#">Financial Tools</a>
                             <div class="dropdown-menu"><a class="dropdown-item" href="#">EMI calculator</a><a class="dropdown-item" href="#">Eligibility Check</a><a class="dropdown-item" href="#">Track Your application</a></div>
                         </div>
@@ -120,7 +122,7 @@
                                 name="loan-amount"
                                 class="form-control"
                             />
-                            <button type="submit" class="btn btn-success">Let's Go</button>
+                            <button type="submit" class="btn btn-primary">Let's Go</button>
                         </form>
                     </div>
                     
@@ -253,97 +255,74 @@
             </div>
         </div>
     </section> -->
+ 
     <section class="pt-5 bg-dark">
-        <div class="container bg-dark py-5 bg-transparent">
-            <div class="row">
-                <div class="col-md-8 col-xl-6 text-center mx-auto">
-                    <p class="fw-bold text-success mb-2"></p>
-                    <h3 class="fw-bold hightlight-heading">Ready to take control of your finances? <br>Let's find the right products for you.</h3>
-                </div>
-            </div>
-            <div class="py-5 p-lg-5">
-                <div class="row row-cols-1 row-cols-md-2 mx-auto" id="h-pg-prod-wrapper">
-                    <div class="col mb-5">
-                        <div class="card shadow-sm">
-                            <div class="card-body d-flex flex-column justify-content-xxl-start align-items-xxl-start px-4 py-5 px-md-5"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-house-door text-success display-1 mb-5">
-                                    <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146ZM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5Z"></path>
-                                </svg>
-                                <h5 class="fw-bold d-xxl-flex justify-content-between align-items-xxl-center card-title">Home Loan</h5>
-                                <p class="text-muted card-text mb-4">Looking for a home loan? At All About Finances we offer a quick and easy way to find the perfect home loan for you. <br><br>With a range of options available, you can compare interest rates, repayment terms, and fees to find the best fit for your budget and lifestyle. </p><button class="btn btn-primary shadow" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-right fs-1">
-                                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
-                                    </svg></button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col mb-5">
-                        <div class="card shadow-sm">
-                            <div class="card-body d-flex flex-column justify-content-xxl-start align-items-xxl-start px-4 py-5 px-md-5"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-house-down text-success display-1 mb-5">
-                                    <path d="M7.293 1.5a1 1 0 0 1 1.414 0L11 3.793V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v3.293l2.354 2.353a.5.5 0 0 1-.708.708L8 2.207l-5 5V13.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 2 13.5V8.207l-.646.647a.5.5 0 1 1-.708-.708L7.293 1.5Z"></path>
-                                    <path d="M12.5 9a3.5 3.5 0 1 1 0 7 3.5 3.5 0 0 1 0-7Zm.354 5.854 1.5-1.5a.5.5 0 0 0-.708-.707l-.646.646V10.5a.5.5 0 0 0-1 0v2.793l-.646-.646a.5.5 0 0 0-.708.707l1.5 1.5a.5.5 0 0 0 .708 0Z"></path>
-                                </svg>
-                                <h5 class="fw-bold d-xxl-flex justify-content-between align-items-xxl-center card-title">Loan Against Property</h5>
-                                <p class="text-muted card-text mb-4">Looking for a loan against your property? At All About Finances we offer comprehensive information on loans against property options from various banks and financial institutions.<br><br>Compare interest rates, loan amounts, repayment periods, and other important details from multiple lenders. </p><button class="btn btn-primary shadow" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-right fs-1">
-                                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
-                                    </svg></button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col mb-5">
-                        <div class="card shadow-sm">
-                            <div class="card-body d-flex flex-column justify-content-xxl-start align-items-xxl-start px-4 py-5 px-md-5"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-house-down text-success display-1 mb-5">
-                                    <path d="M7.293 1.5a1 1 0 0 1 1.414 0L11 3.793V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v3.293l2.354 2.353a.5.5 0 0 1-.708.708L8 2.207l-5 5V13.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 2 13.5V8.207l-.646.647a.5.5 0 1 1-.708-.708L7.293 1.5Z"></path>
-                                    <path d="M12.5 9a3.5 3.5 0 1 1 0 7 3.5 3.5 0 0 1 0-7Zm.354 5.854 1.5-1.5a.5.5 0 0 0-.708-.707l-.646.646V10.5a.5.5 0 0 0-1 0v2.793l-.646-.646a.5.5 0 0 0-.708.707l1.5 1.5a.5.5 0 0 0 .708 0Z"></path>
-                                </svg>
-                                <h5 class="fw-bold d-xxl-flex justify-content-between align-items-xxl-center card-title">Business Loan</h5>
-                                <p class="text-muted card-text mb-4">Looking for a loan against your property? At All About Finances we offer comprehensive information on loans against property options from various banks and financial institutions.</p><button class="btn btn-primary shadow" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-right fs-1">
-                                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
-                                    </svg></button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col mb-5">
-                        <div class="card shadow-sm">
-                            <div class="card-body d-flex flex-column justify-content-xxl-start align-items-xxl-start px-4 py-5 px-md-5"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-house-down text-success display-1 mb-5">
-                                    <path d="M7.293 1.5a1 1 0 0 1 1.414 0L11 3.793V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v3.293l2.354 2.353a.5.5 0 0 1-.708.708L8 2.207l-5 5V13.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 2 13.5V8.207l-.646.647a.5.5 0 1 1-.708-.708L7.293 1.5Z"></path>
-                                    <path d="M12.5 9a3.5 3.5 0 1 1 0 7 3.5 3.5 0 0 1 0-7Zm.354 5.854 1.5-1.5a.5.5 0 0 0-.708-.707l-.646.646V10.5a.5.5 0 0 0-1 0v2.793l-.646-.646a.5.5 0 0 0-.708.707l1.5 1.5a.5.5 0 0 0 .708 0Z"></path>
-                                </svg>
-                                <h5 class="fw-bold d-xxl-flex justify-content-between align-items-xxl-center card-title">Personal Loan</h5>
-                                <p class="text-muted card-text mb-4">Looking for a loan against your property? At All About Finances we offer comprehensive information on loans against property options from various banks and financial institutions.</p><button class="btn btn-primary shadow" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-right fs-1">
-                                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
-                                    </svg></button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col mb-5">
-                        <div class="card shadow-sm">
-                            <div class="card-body d-flex flex-column justify-content-xxl-start align-items-xxl-start px-4 py-5 px-md-5"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-house-down text-success display-1 mb-5">
-                                    <path d="M7.293 1.5a1 1 0 0 1 1.414 0L11 3.793V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v3.293l2.354 2.353a.5.5 0 0 1-.708.708L8 2.207l-5 5V13.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 2 13.5V8.207l-.646.647a.5.5 0 1 1-.708-.708L7.293 1.5Z"></path>
-                                    <path d="M12.5 9a3.5 3.5 0 1 1 0 7 3.5 3.5 0 0 1 0-7Zm.354 5.854 1.5-1.5a.5.5 0 0 0-.708-.707l-.646.646V10.5a.5.5 0 0 0-1 0v2.793l-.646-.646a.5.5 0 0 0-.708.707l1.5 1.5a.5.5 0 0 0 .708 0Z"></path>
-                                </svg>
-                                <h5 class="fw-bold d-xxl-flex justify-content-between align-items-xxl-center card-title">Balance Transfer</h5>
-                                <p class="text-muted card-text mb-4">Looking for a loan against your property? At All About Finances we offer comprehensive information on loans against property options from various banks and financial institutions.</p><button class="btn btn-primary shadow" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-right fs-1">
-                                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
-                                    </svg></button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col mb-5">
-                        <div class="card shadow-sm">
-                            <div class="card-body d-flex flex-column justify-content-xxl-start align-items-xxl-start px-4 py-5 px-md-5"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-house-down text-success display-1 mb-5">
-                                    <path d="M7.293 1.5a1 1 0 0 1 1.414 0L11 3.793V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v3.293l2.354 2.353a.5.5 0 0 1-.708.708L8 2.207l-5 5V13.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 2 13.5V8.207l-.646.647a.5.5 0 1 1-.708-.708L7.293 1.5Z"></path>
-                                    <path d="M12.5 9a3.5 3.5 0 1 1 0 7 3.5 3.5 0 0 1 0-7Zm.354 5.854 1.5-1.5a.5.5 0 0 0-.708-.707l-.646.646V10.5a.5.5 0 0 0-1 0v2.793l-.646-.646a.5.5 0 0 0-.708.707l1.5 1.5a.5.5 0 0 0 .708 0Z"></path>
-                                </svg>
-                                <h5 class="fw-bold d-xxl-flex justify-content-between align-items-xxl-center card-title">Gold Loan</h5>
-                                <p class="text-muted card-text mb-4">Looking for a loan against your property? At All About Finances we offer comprehensive information on loans against property options from various banks and financial institutions.</p><button class="btn btn-primary shadow" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-right fs-1">
-                                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
-                                    </svg></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+      <div class="container bg-dark py-5 bg-transparent">
+          <div class="row">
+              <div class="col-md-8 col-xl-6 text-center mx-auto">
+                  <p class="fw-bold text-success mb-2"></p>
+                  <h3 class="fw-bold hightlight-heading">Ready to take control of your finances? <br>Let's find the right products for you.</h3>
+              </div>
+          </div>
+          <div class="py-5 p-lg-5">
+              <div class="row row-cols-1 row-cols-md-2 mx-auto" id="h-pg-prod-wrapper">
+                  <div class="col mb-5">
+                      <div class="card shadow-sm">
+                          <div class="card-body d-flex flex-column justify-content-xxl-start align-items-xxl-start px-4 py-5 px-md-5"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-house-door text-success display-1 mb-5">
+                                  <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146ZM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5Z"></path>
+                              </svg>
+                              <h5 class="fw-bold d-xxl-flex justify-content-between align-items-xxl-center card-title">Home Loan</h5>
+                              <p class="text-muted card-text mb-4">Looking for a home loan? At All About Finances we offer a quick and easy way to find the perfect home loan for you. <br><br>With a range of options available, you can compare interest rates, repayment terms, and fees to find the best fit for your budget and lifestyle. </p><a href="home-loan.html" class="btn btn-primary shadow" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-right fs-1">
+                                      <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
+                                  </svg></a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col mb-5">
+                      <div class="card shadow-sm">
+                          <div class="card-body d-flex flex-column justify-content-xxl-start align-items-xxl-start px-4 py-5 px-md-5"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-house-down text-success display-1 mb-5">
+                                  <path d="M7.293 1.5a1 1 0 0 1 1.414 0L11 3.793V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v3.293l2.354 2.353a.5.5 0 0 1-.708.708L8 2.207l-5 5V13.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 2 13.5V8.207l-.646.647a.5.5 0 1 1-.708-.708L7.293 1.5Z"></path>
+                                  <path d="M12.5 9a3.5 3.5 0 1 1 0 7 3.5 3.5 0 0 1 0-7Zm.354 5.854 1.5-1.5a.5.5 0 0 0-.708-.707l-.646.646V10.5a.5.5 0 0 0-1 0v2.793l-.646-.646a.5.5 0 0 0-.708.707l1.5 1.5a.5.5 0 0 0 .708 0Z"></path>
+                              </svg>
+                              <h5 class="fw-bold d-xxl-flex justify-content-between align-items-xxl-center card-title">Loan Against Property</h5>
+                              <p class="text-muted card-text mb-4">Looking for a loan against your property? At All About Finances we offer comprehensive information on loans against property options from various banks and financial institutions.<br><br>Compare interest rates, loan amounts, repayment periods, and other important details from multiple lenders. </p><button class="btn btn-primary shadow" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-right fs-1">
+                                      <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
+                                  </svg></button>
+                          </div>
+                      </div>
+                  </div>
+              
+               
+                  <div class="col mb-5">
+                      <div class="card shadow-sm">
+                          <div class="card-body d-flex flex-column justify-content-xxl-start align-items-xxl-start px-4 py-5 px-md-5"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-house-down text-success display-1 mb-5">
+                                  <path d="M7.293 1.5a1 1 0 0 1 1.414 0L11 3.793V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v3.293l2.354 2.353a.5.5 0 0 1-.708.708L8 2.207l-5 5V13.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 2 13.5V8.207l-.646.647a.5.5 0 1 1-.708-.708L7.293 1.5Z"></path>
+                                  <path d="M12.5 9a3.5 3.5 0 1 1 0 7 3.5 3.5 0 0 1 0-7Zm.354 5.854 1.5-1.5a.5.5 0 0 0-.708-.707l-.646.646V10.5a.5.5 0 0 0-1 0v2.793l-.646-.646a.5.5 0 0 0-.708.707l1.5 1.5a.5.5 0 0 0 .708 0Z"></path>
+                              </svg>
+                              <h5 class="fw-bold d-xxl-flex justify-content-between align-items-xxl-center card-title">Balance Transfer</h5>
+                              <p class="text-muted card-text mb-4">Looking for a loan against your property? At All About Finances we offer comprehensive information on loans against property options from various banks and financial institutions.</p><button class="btn btn-primary shadow" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-right fs-1">
+                                      <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
+                                  </svg></button>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col mb-5">
+                      <div class="card shadow-sm">
+                          <div class="card-body d-flex flex-column justify-content-xxl-start align-items-xxl-start px-4 py-5 px-md-5"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-house-down text-success display-1 mb-5">
+                                  <path d="M7.293 1.5a1 1 0 0 1 1.414 0L11 3.793V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v3.293l2.354 2.353a.5.5 0 0 1-.708.708L8 2.207l-5 5V13.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 2 13.5V8.207l-.646.647a.5.5 0 1 1-.708-.708L7.293 1.5Z"></path>
+                                  <path d="M12.5 9a3.5 3.5 0 1 1 0 7 3.5 3.5 0 0 1 0-7Zm.354 5.854 1.5-1.5a.5.5 0 0 0-.708-.707l-.646.646V10.5a.5.5 0 0 0-1 0v2.793l-.646-.646a.5.5 0 0 0-.708.707l1.5 1.5a.5.5 0 0 0 .708 0Z"></path>
+                              </svg>
+                              <h5 class="fw-bold d-xxl-flex justify-content-between align-items-xxl-center card-title">Renovation Loan</h5>
+                              <p class="text-muted card-text mb-4">Looking for a loan against your property? At All About Finances we offer comprehensive information on loans against property options from various banks and financial institutions.</p><button class="btn btn-primary shadow" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-right fs-1">
+                                      <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
+                                  </svg></button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
 
     <section class="py-5 bg-dark" style="/*background: #1a84fb !important;*/">
         <div class="d-flex d-xxl-flex justify-content-between align-items-xxl-center container">
@@ -622,13 +601,13 @@
                 </div>
                 <div class="col-sm-4 col-md-3 text-center text-lg-start d-flex flex-column order-last col-lg-2">
                     <h3 class="fs-6 fw-bold">Loans</h3>
-                    <ul class="list-unstyled">
-                        <li><a href="#">Personal Loan</a></li>
-                        <li><a href="#">Business Loan</a></li>
-                        <li><a href="#">Home Loan</a></li>
-                        <li><a href="#">Balance Transfer</a></li>
+                      <ul class="list-unstyled">
+                        
+                        
+                        <li><a href="home-loan.html">Home Loan</a></li>
                         <li><a href="#">Loan Against Property</a></li>
-                        <li><a href="#">Gold Loan</a></li>
+                        <li><a href="#">Balance Transfer</a></li>
+                        <li><a href="#">Renovation Loan</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-4 col-md-3 text-center text-lg-start d-flex flex-column order-last col-lg-2">

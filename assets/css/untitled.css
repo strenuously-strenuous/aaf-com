@@ -23,7 +23,7 @@
   color: #1a84fb !important;
 }
 
-h3.hightlight-heading::after {
+.hightlight-heading::after {
   content: '';
   width: 100px;
   height: 2px;
@@ -36,5 +36,10 @@ h3.hightlight-heading::after {
 
 h3.hightlight-heading {
   position: relative;
+}
+
+
+#modal img {
+  max-width: 100px;
 }
 
