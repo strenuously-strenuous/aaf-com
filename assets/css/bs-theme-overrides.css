@@ -1,8 +1,12 @@
 :root, [data-bs-theme=light] {
   --bs-primary: #3160ed;
   --bs-primary-rgb: 49,96,237;
-  --bs-primary-text-emphasis: #14265F;
-  --bs-primary-bg-subtle: #D6DFFB;
+  --bs-primary-text-emphasis: #fff;
+  --bs-accordion-bg: #fff;
+  --bs-accordion-color: dark;
+  /* --bs-primary-text-emphasis: #14265F; */
+  /* --bs-primary-bg-subtle: #D6DFFB; */
+  --bs-primary-bg-subtle: #3160ed;
   --bs-primary-border-subtle: #ADBFF8;
   --bs-link-color: #3160ed;
   --bs-link-color-rgb: 49,96,237;
