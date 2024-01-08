@@ -106,7 +106,7 @@ header img {
   background: url("../img/Home Loan.png");
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: right bottom ;
+  background-position: 80% ;
   height: 100%;
   min-height: 100px;
 }
