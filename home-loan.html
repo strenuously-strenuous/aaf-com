@@ -24,6 +24,104 @@
 </head>
 
 <body>
+
+    <div class="position-fixed bottom-0 end-0 translate-middle-x" style="z-index: 999;">
+        <a href="#" class="bg-primary px-3 py-2 rounded-top text-white" id="requestQuoteButton" 
+        data-bs-toggle="modal" data-bs-target="#modal1" >Request A CallBack</a>
+    </div>
+
+    <div class="modal fade
+    " tabindex="-1" id="modal1"  aria-modal="true" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content bg-white text-dark">
+          <div class="modal-header d-lg-flex">
+            <h4 class="modal-title">
+              <strong>Apply For Your Loan in Minutes!</strong>
+            </h4>
+            <button class="btn-close" id="btn-fclose" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
+          </div>
+          <form id="requestQuoteForm">
+            <div class="modal-body mt-3 mb-5" style="margin-bottom: 0px; padding-bottom: 0px">
+              <div class="d-flex align-items-center mb-3">
+                <label for="" class=" text-nowrap me-4 fs-6 fw-bold">Enter Your Required Amount:</label>
+                <input type="text" id="loanAmount"  type="text"
+                class="form-control"
+                name="loanAmount"
+                aria-label="Amount"
+                id="loan-amount"
+                pattern="^[0-9a-zA-z]+(,[0-9a-zA-z]+){0,11}$"
+                value="5,00,000" placeholder="">
+              </div>
+              <!-- <label for="" class=" text-nowrap me-4 fs-6 fw-bold mb-3">Enter Your Mobile No:</label> -->
+              <div class="input-group col-6">
+                <span class="input-group-text">
+                  <i class="fa-solid fa-phone lg"></i>
+                </span>
+                <input
+                  type="tel"
+                  class="form-control"
+                  name="mobile"
+                  id="mobile"
+                />
+              </div>
+            
+            </div>
+            <div class="modal-footer d-lg-flex justify-content-lg-center" style="border: 0; padding-top: 0">
+              <button class="btn btn-dark py-2" type="submit" style="width: 100%; border-radius: 4px">
+                SUBMIT
+              </button>
+            </div>
+            <div>
+              <p class="visually-hidden alert alert-warning small" id="success-message">Thank You for contacting All About Finances. Our Company Executive will call you shortly</p>
+              <p class="visually-hidden alert alert-danger small" id="error-message">Failed. Try again later or contact on the given numbers.</p>
+            </div>
+            <div class="modal-body">
+              <div>
+                <i class="fa-solid fa-circle-check text-success"></i>
+
+                Get Your Loan in just 3 Steps from Our NBFC/Lending Partners:</div>
+              <div class="swiper form-carousel">
+                  <div class="swiper-wrapper d-flex align-items-center">
+                      <div class="swiper-slide">
+                        <img class="img-fluid" src="assets/img/aadhar-housing.png" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                        <img class="img-fluid" src="assets/img/aavas.png" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                        <img class="img-fluid" src="assets/img/gic-housing.png" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                        <img class="img-fluid" src="assets/img/piramal.png" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                        <img class="img-fluid" src="assets/img/utkarsh.jpg" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                        <img class="img-fluid" src="assets/img/icici.png" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                        <img class="img-fluid" src="assets/img/standard-chartered-bank-new-20211713.jpg" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                        <img class="img-fluid" src="assets/img/Square-1200x1200px.jpg" alt="">
+                      </div>
+                      <!-- <div class="swiper-slide">
+                        <img src="assets/img/shriram-housing.avif" alt="">
+                      </div> -->
+
+                  </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+    
     <nav class="navbar navbar-expand-lg sticky-top bg-dark py-3 navbar-dark" id="mainNav">
         <div class="container"><a class="navbar-brand d-flex align-items-center" href="/">
             <img src="https://allaboutfinances.in/ad_campaigns/assets/img/final-sec-brand.png" width="300"></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
@@ -75,7 +173,7 @@
                         <p class="my-3">Get Best Interest Rate, Check Eligibility and Calculate your EMI all under one roof.
                             <br><br>Get Best Pre-approved Loan from 50+ lenders instantly.
                         </p>
-                        <a href="#" class="btn btn-primary mt-4">Compare & Apply</a>
+                        <a href="#accordionExample" class="btn btn-primary mt-4">Compare & Apply</a>
                     </div>
                 </div>
                 <div class="col-md-6 mb-4">
@@ -196,8 +294,107 @@ get a list of most affordable home loan schemes.
         </div>
     </section>
 
-    <section class="my-5 pb-5">
-        <img src="assets/img/pnb-home loan-banner.jpg" class="img-fluid mt-3" alt="">
+    <section class="my-5 pb-5 container rounded p-5" id="bg-dif">
+        <!-- <img src="assets/img/pnb-home loan-banner.jpg" class="img-fluid mt-3" alt=""> -->
+
+        <div class="card text-start rounded overflow-hidden">
+            <div class="card-header bg-dark pt-3 px-4">
+                
+                <h6>Home Loan Eligibility Criteria</h6>
+            </div>
+            <div class="card-body bg-white text-dark p-4">
+                <p>If you are:</p>
+                <ul>
+                    <li class="">Government Employee, Salaried, Self Employed, Business Men. 
+                    </li>
+                    <li>With Income Tax returns, Without Income Tax Returns, and Cash Salaries.</li>
+                    <li>Registered Business, Non-Registered Business. Small Shop Owners. Rented Shop Owners etc.</li>
+                </ul>
+                <p class="mt-4">
+                    <i class="fa-solid fa-circle-check me-2 text-primary"></i>
+                    We also offer home loans on Cash Salary and to Small Shop Keepers with no Income Proof.
+                </p>
+                <p class="card-text"><strong>Need Help?</strong> <br>
+                    You may take advise from our Loan Expert professional consultants.
+                    <br> Who will help you to choose best bank who offers you <strong>lowest rate of interest </strong>  on home loan
+                     with ZERO / nominal bank processing fees.
+                    </p>
+
+                    <a id="requestQuoteButton" data-bs-toggle="modal" data-bs-target="#modal1" class="btn btn-primary" type="button">Apply Today!</a>
+            </div>
+        </div>
+
+        
+
+        
+        
+    </section>
+
+
+    <section class="my-5 container rounded p-5 bg-white" 
+    id="sec-bg-home-loan">
+        <div class="row">
+            <div class="col">
+                <div class="swiper" id="swiper-hl-01">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide bg-white">
+                            <img 
+                            class="img-fluid"
+                            style="max-height: 80px;"
+                            src="assets/img/hdfc.webp" alt="">
+                            <div class="text-dark d-flex gap-5 align-items-center">
+                                <h3 class="fs-2">
+                                    <span class="fs-1 fw-bold text-success">Home Loan</span>
+                                    <br>
+                                Offer Starting
+                                </h3>
+                                <span class="display-1">
+                                    @8.40%
+                                </span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide bg-white">
+                            <img 
+                            class="img-fluid"
+                            style="max-height: 80px;"
+                            src="assets/img/hdfc.webp" alt="">
+                            <div class="text-dark d-flex gap-5 align-items-center">
+                                <h3 class="fs-2">
+                                    <span class="fs-1 fw-bold text-success">Home Loan</span>
+                                    <br>
+                                Offer Starting
+                                </h3>
+                                <span class="display-1">
+                                    @8.50%
+                                </span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide bg-white">
+                            <img 
+                            class="img-fluid"
+                            style="max-height: 80px;"
+                            src="assets/img/hdfc.webp" alt="">
+                            <div class="text-dark d-flex gap-5 align-items-center">
+                                <h3 class="fs-2">
+                                    <span class="fs-1 fw-bold text-success">Home Loan</span>
+                                    <br>
+                                Offer Starting
+                                </h3>
+                                <span class="display-1">
+                                    @8.40%
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <!-- <img 
+                class="img-fluid"
+                style="max-width: 300px;"
+                src="assets/img/Home Loan.png" alt=""> -->
+            </div>
+        </div>
     </section>
 
     <section>
@@ -206,6 +403,87 @@ get a list of most affordable home loan schemes.
                 <h2 class="text-dark mb-5 text-center fs-4 hightlight-heading position-relative">Learn more about Home Loans</h2>
 
                 <div class="accordion" id="accordionExample">
+
+
+
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button
+                                class="accordion-button"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree"
+                                aria-expanded="true"
+                                aria-controls="collapseThree"
+                            >
+                            <i class="fa-solid fa-circle-check me-3"></i>
+                            Current Home Loan Interest Rates 2024
+                            </button>
+                        </h2>
+                        <div
+                            id="collapseThree"
+                            class="accordion-collapse collapse show "
+                            aria-labelledby="headingThree"
+                            data-bs-parent="#accordionExample"
+                        >
+                            <div class="accordion-body bg-white text-dark">
+                                <table
+ 
+class="table table-bordered table-striped table-light">
+    <thead>
+      <tr>
+        <th scope="col">Feature</th>
+        <th scope="col">Details</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Interest Rate</td>
+        <td>Starting @8.50% - 9.15%</td>
+      </tr>
+      <tr>
+        <td>Processing Fee</td>
+        <td>Up to 0.25%</td>
+      </tr>
+      <tr>
+        <td>Loan Tenure</td>
+        <td>Up to 30 Years</td>
+      </tr>
+      <tr>
+        <td>Lowest EMI Per Lakh</td>
+        <td>Rs. 769</td>
+      </tr>
+      <tr>
+        <td>Prepayment Charges</td>
+        <td>Nil</td>
+        
+      </tr>
+      <tr>
+        <td></td>
+        <td  class="">
+            <a id="requestQuoteButton" data-bs-toggle="modal" data-bs-target="#modal1" class="btn btn-primary" type="button">Apply Today!</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+                                
+                                
+                                <ul>
+                                    <li>Home loan interest rates can be floating or fixed in nature.</li>
+                                    <li>Interest rates remain unchanged throughout the tenure for fixed interest rate home loans.</li>
+                                    <li>Interest rates fluctuate depending on the RBI or bank’s policies, and other external factors for floating interest rate based home loans.</li>
+                                    <li>Interest rates on home loans can be linked to Repo Rate or MCLR (Marginal Cost of Funds Based Lending Rate). </li>
+                                    <li>The Best interest rates for home loans have become highly affordable in the last couple of years.</li>
+                                </ul>                                    
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    
+                    
                     <div class="accordion-item ">
                         <h2 class="accordion-header" id="headingOne">
                             <button
@@ -216,16 +494,17 @@ get a list of most affordable home loan schemes.
                                 aria-expanded="true"
                                 aria-controls="collapseOne"
                             >
+                            <i class="fa-solid fa-circle-check me-3"></i>
                             Types of Home Loans
                             </button>
                         </h2>
                         <div
                             id="collapseOne"
-                            class="accordion-collapse collapse show"
+                            class="accordion-collapse collapse "
                             aria-labelledby="headingOne"
                             data-bs-parent="#accordionExample"
                         >
-                            <div class="accordion-body">
+                            <div class="accordion-body bg-white text-dark">
                                 <ol>
                                     <li>Home Loan for Ready to Move in                                     </li>
                                     <li>Home Loan for Under Construction</li>
@@ -234,6 +513,8 @@ get a list of most affordable home loan schemes.
                                     <li>Plot Purchase+ Construction Loan</li>
                                     <li>Home Renovation Loan</li>
                                 </ol>
+                                <p>You can take our professional consultancy and we will be there with you throughout for each and every step.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -248,33 +529,192 @@ get a list of most affordable home loan schemes.
                                 aria-expanded="true"
                                 aria-controls="collapseTwo"
                             >
-                            <i class="fa-regular fa-circle-check me-2 text-success"></i>
-                            Current Home Loan Interest Rates 2024
+                            <i class="fa-solid fa-circle-check me-3"></i>
+                            Documents Required
                             </button>
                         </h2>
                         <div
                             id="collapseTwo"
-                            class="accordion-collapse collapse"
+                            class="accordion-collapse collapse "
                             aria-labelledby="headingTwo"
                             data-bs-parent="#accordionExample"
                         >
                             <div class="accordion-body bg-white text-dark">
-                                <ol>
-                                    <li>Home Loan for Ready to Move in                                     </li>
-                                    <li>Home Loan for Under Construction</li>
-                                    <li>Construction Loan</li>
-                                    <li>Plot Purchase Loan </li>
-                                    <li>Plot Purchase+ Construction Loan</li>
-                                    <li>Home Renovation Loan</li>
-                                </ol>
+                                <h2>Required Documents for Home Loan Application</h2>
+
+<p>Every customer must satisfy the Know Your Customer (KYC) norms stipulated by RBI. This includes providing documents relating to KYC, employment, business, and income.</p>
+
+<h3>General Documents</h3>
+
+<ul>
+  <li>Loan application form (duly filled in)</li>
+  <li>Photographs</li>
+  <li>Signature proof</li>
+</ul>
+
+<h3>KYC Documents</h3>
+
+<ul>
+  <li>Identity Proof (any one):
+    <ul>
+      <li>PAN Card</li>
+      <li>Aadhar Card</li>
+      <li>Voter ID</li>
+      <li>Driving Licence</li>
+      <li>Passport</li>
+    </ul>
+  </li>
+  <li>Address Proof (any one):
+    <ul>
+      <li>Registered Rent agreement</li>
+      <li>Aadhar Card</li>
+      <li>Driving License</li>
+      <li>Lease agreement</li>
+      <li>Passport</li>
+      <li>Latest Gas or electricity bill</li>
+    </ul>
+  </li>
+</ul>
+
+<h3>Property Documents</h3>
+
+<ol>
+  <li>Copies of all property documents that can establish the chain of ownership for the past 30 years.</li>
+  <li>Encumbrance certificate for 30 years.</li>
+  <li>Property tax paid receipt (if residing in the mortgaged property, usually for Home Loan Balance Transfer).</li>
+</ol>
+
+<h3>Income Proof Documents</h3>
+
+<ul>
+  <li>For Salaried Employees:
+    <ul>
+      <li>Salary slips for the last 6 months.</li>
+      <li>IT returns for the past 3 years (along with Form 16, if applicable).</li>
+      <li>Statement of Account for the past 1 year where salary is credited.</li>
+    </ul>
+  </li>
+  <li>For Self-Employed Individuals:
+    <ul>
+      <li>IT returns for the past 3 years (some banks accept 2 years).</li>
+      <li>Profit and Loss statement and Balance sheet for the last 2 years.</li>
+      <li>Sales tax, GST registration certificates (if applicable).</li>
+      <li>Partnership deed (for partners in a partnership firm).</li>
+      <li>Certificate of Incorporation (for directors of limited companies).</li>
+    </ul>
+  </li>
+</ul>
+
+
                             </div>
                         </div>
                     </div>
+
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFour">
+                            <button
+                                class="accordion-button"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#collapseFour"
+                                aria-expanded="true"
+                                aria-controls="collapseFour"
+                            >
+                            <i class="fa-solid fa-circle-check me-3"></i>
+                            Eligibility
+                            </button>
+                        </h2>
+                        <div
+                            id="collapseFour"
+                            class="accordion-collapse collapse "
+                            aria-labelledby="headingFour"
+                            data-bs-parent="#accordionExample"
+                        >
+                            <div class="accordion-body bg-white text-dark">
+                                <h2>Factors Determining Home Loan Eligibility</h2>
+
+<p>Various factors influence your eligibility for a home loan. The basic rules apply to both salaried and self-employed individuals, but some banks may have specific requirements for the latter.</p>
+
+<ol>
+  <li><strong>Income:</strong>
+    <ul>
+      <li>Salaried employees:
+        <ul>
+          <li>Salary slips for the last 3 months</li>
+          <li>Bank statement for the past 6 months showing salary credit</li>
+        </ul>
+      </li>
+      <li>Self-employed professionals:
+        <ul>
+          <li>Statement of accounts for 1 year showing income from services</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><strong>Continuity of Employment/Business:</strong>
+    <ul>
+      <li>Salaried employees:
+        <ul>
+          <li>Income tax returns</li>
+          <li>Form 16 or Form 26AS</li>
+          <li>Provident Fund statements (if applicable)</li>
+        </ul>
+      </li>
+      <li>Self-employed individuals:
+        <ul>
+          <li>Income tax returns</li>
+          <li>Balance sheets</li>
+          <li>Profit and loss statements</li>
+          <li>Client invoices</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><strong>Current Obligations:</strong>
+    <ul>
+      <li>Include existing loan installments (personal, vehicle, etc.) in eligibility calculations.</li>
+    </ul>
+  </li>
+  <li><strong>Credit History:</strong>
+    <ul>
+      <li>Assessed by CIBIL or other credit bureaus.</li>
+      <li>Credit score ranges from 300-900 (higher is better).</li>
+      <li>Score of 600+ generally considered fair for home loan eligibility.</li>
+    </ul>
+  </li>
+  <li><strong>Property Value:</strong>
+    <ul>
+      <li>Determines loan amount (Loan to Value ratio).</li>
+      <li>Banks typically finance 75%-90% of the property value.</li>
+      <li>Remainder is your down payment or margin.</li>
+    </ul>
+  </li>
+  <li><strong>Legal Position:</strong>
+    <ul>
+      <li>You must be legally empowered to mortgage the property as security.</li>
+      <li>Banks conduct legal scrutiny reports to verify ownership history.</li>
+    </ul>
+  </li>
+  <li><strong>Age of the Borrower:</strong>
+    <ul>
+      <li>Minimum age at application: 21 years.</li>
+      <li>Maximum age at maturity: generally 65 years (some banks extend to 70).</li>
+    </ul>
+  </li>
+</ol>
+
+<p><strong>Note:</strong> Specific requirements may vary between banks. Consult us for their exact eligibility criteria and documents needed.</p>
+
+                                 
+                            </div>
+                        </div>
+                    </div>
+
+
+
                 </div>
-
-                
             </div>
-
         </div>
     </section>
 
@@ -376,6 +816,8 @@ get a list of most affordable home loan schemes.
                           </div>
                       </div>
                   </div>
+
+                  
               
                
                   <div class="col mb-5">
@@ -409,11 +851,24 @@ get a list of most affordable home loan schemes.
       </div>
   </section>
 
+
+  <section class="container bg-white text-dark my-5 p-5 rounded" id="products-hl-bg01">
+    <h3 class="fw-bold mb-4">Best Home Loan Interest Rates        </h3>
+    <p>Check out the best home loan interest rates 2024 to find out which bank offers the lowest home loan interest rate of 8.50% p.a. even after several rate hikes! Discover the current home loan interest rates for government employees and women, as well as the distinction between floating-rate and fixed-rate home loans.
+    </p>
+
+    <a id="requestQuoteButton" data-bs-toggle="modal" data-bs-target="#modal1" class="btn btn-primary mt-4" type="button">Apply Now @8.50% p.a.
+    </a>
+
+
+</section>
+
     <section class="py-5 bg-dark" style="/*background: #1a84fb !important;*/">
         <div class="d-flex d-xxl-flex justify-content-between align-items-xxl-center container">
             <h1>Free Credit Score &amp;&nbsp;<br>Best Loan Offers From 50+ Lenders.</h1><button class="btn btn-primary" type="button">Apply Today!</button>
         </div>
     </section>
+
     <section class="py-5">
         <div class="container py-5">
             <div class="row mb-5">
@@ -423,179 +878,180 @@ get a list of most affordable home loan schemes.
                     <p class="text-muted">From business expansion to home improvement, we have the loan for you.</p>
                 </div>
             </div><!-- Slider main container -->
-<div class="swiper">
-  <!-- Additional required wrapper -->
-  <div class="swiper-wrapper">
-    <!-- Slides -->
-    <div class="swiper-slide">
-        <div class="d-flex flex-column align-items-center align-items-sm-start">
-                        <p class="bg-dark border rounded border-dark p-4">"Very good experience"</p>
-                        <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50" src="https://allaboutfinances.in/wp-content/uploads/2023/05/unnamed-4.png">
-                            <div>
-                                <p class="fw-bold text-primary mb-0">Mohit Pandit</p>
-                                <p class="text-muted mb-0">Erat netus</p>
-                            </div>
-                        </div>
-                    </div>  
-    </div>
-    <div class="swiper-slide">
-    <div class="d-flex flex-column align-items-center align-items-sm-start">
-                        <p class="bg-dark border rounded border-dark p-4">Very experienced team</p>
-                        <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50" src="https://allaboutfinances.in/wp-content/uploads/2023/05/unnamed-3.png">
-                            <div>
-                                <p class="fw-bold text-primary mb-0">Sadhana Bhardwaj</p>
-                                <p class="text-muted mb-0">Erat netus</p>
-                            </div>
-                        </div>
-                    </div>  
-    </div>
-    <div class="swiper-slide">
-    <div class="d-flex flex-column align-items-center align-items-sm-start">
-                        <p class="bg-dark border rounded border-dark p-4">I am very impressed about the services of all about finances</p>
-                        <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50" src="https://allaboutfinances.in/wp-content/uploads/2023/05/unnamed-2.png">
-                            <div>
-                                <p class="fw-bold text-primary mb-0">Umesh Mishra</p>
-                                <p class="text-muted mb-0">Erat netus</p>
+            <div class="swiper swiper-testimonials">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <div class="d-flex flex-column align-items-center align-items-sm-start">
+                            <p class="bg-dark border rounded border-dark p-4">"Very good experience"</p>
+                            <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50"
+                                    height="50"
+                                    src="https://allaboutfinances.in/wp-content/uploads/2023/05/unnamed-4.png">
+                                <div>
+                                    <p class="fw-bold text-primary mb-0">Mohit Pandit</p>
+                                    <p class="text-muted mb-0">Erat netus</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-    </div>
-    <div class="swiper-slide">
-    <div class="d-flex flex-column align-items-center align-items-sm-start">
-                        <p class="bg-dark border rounded border-dark p-4">I am very impressed about the services of all about finances</p>
-                        <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50" src="https://allaboutfinances.in/wp-content/uploads/2023/05/unnamed-2.png">
-                            <div>
-                                <p class="fw-bold text-primary mb-0">Umesh Mishra</p>
-                                <p class="text-muted mb-0">Erat netus</p>
+                    <div class="swiper-slide">
+                        <div class="d-flex flex-column align-items-center align-items-sm-start">
+                            <p class="bg-dark border rounded border-dark p-4">Very experienced team</p>
+                            <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50"
+                                    height="50"
+                                    src="https://allaboutfinances.in/wp-content/uploads/2023/05/unnamed-3.png">
+                                <div>
+                                    <p class="fw-bold text-primary mb-0">Sadhana Bhardwaj</p>
+                                    <p class="text-muted mb-0">Erat netus</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-    </div>
-    <div class="swiper-slide">
-    <div class="d-flex flex-column align-items-center align-items-sm-start">
-                        <p class="bg-dark border rounded border-dark p-4">I am very impressed about the services of all about finances</p>
-                        <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50" src="https://allaboutfinances.in/wp-content/uploads/2023/05/unnamed-2.png">
-                            <div>
-                                <p class="fw-bold text-primary mb-0">Umesh Mishra</p>
-                                <p class="text-muted mb-0">Erat netus</p>
+                    <div class="swiper-slide">
+                        <div class="d-flex flex-column align-items-center align-items-sm-start">
+                            <p class="bg-dark border rounded border-dark p-4">I am very impressed about the services of
+                                all about finances</p>
+                            <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50"
+                                    height="50"
+                                    src="https://allaboutfinances.in/wp-content/uploads/2023/05/unnamed-2.png">
+                                <div>
+                                    <p class="fw-bold text-primary mb-0">Umesh Mishra</p>
+                                    <p class="text-muted mb-0">Erat netus</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-    </div>
-    <div class="swiper-slide">
-    <div class="d-flex flex-column align-items-center align-items-sm-start">
-                        <p class="bg-dark border rounded border-dark p-4">I am very impressed about the services of all about finances</p>
-                        <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50" src="https://allaboutfinances.in/wp-content/uploads/2023/05/unnamed-2.png">
-                            <div>
-                                <p class="fw-bold text-primary mb-0">Umesh Mishra</p>
-                                <p class="text-muted mb-0">Erat netus</p>
+                    <div class="swiper-slide">
+                        <div class="d-flex flex-column align-items-center align-items-sm-start">
+                            <p class="bg-dark border rounded border-dark p-4">I am very impressed about the services of
+                                all about finances</p>
+                            <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50"
+                                    height="50"
+                                    src="https://allaboutfinances.in/wp-content/uploads/2023/05/unnamed-2.png">
+                                <div>
+                                    <p class="fw-bold text-primary mb-0">Umesh Mishra</p>
+                                    <p class="text-muted mb-0">Erat netus</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-    </div>
-    <div class="swiper-slide">
-    <div class="d-flex flex-column align-items-center align-items-sm-start">
-                        <p class="bg-dark border rounded border-dark p-4">I am very impressed about the services of all about finances</p>
-                        <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50" src="https://allaboutfinances.in/wp-content/uploads/2023/05/unnamed-2.png">
-                            <div>
-                                <p class="fw-bold text-primary mb-0">Umesh Mishra</p>
-                                <p class="text-muted mb-0">Erat netus</p>
+                    <div class="swiper-slide">
+                        <div class="d-flex flex-column align-items-center align-items-sm-start">
+                            <p class="bg-dark border rounded border-dark p-4">I am very impressed about the services of
+                                all about finances</p>
+                            <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50"
+                                    height="50"
+                                    src="https://allaboutfinances.in/wp-content/uploads/2023/05/unnamed-2.png">
+                                <div>
+                                    <p class="fw-bold text-primary mb-0">Umesh Mishra</p>
+                                    <p class="text-muted mb-0">Erat netus</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-    </div>
-    <div class="swiper-slide">
-    <div class="d-flex flex-column align-items-center align-items-sm-start">
-                        <p class="bg-dark border rounded border-dark p-4">I am very impressed about the services of all about finances</p>
-                        <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50" src="https://allaboutfinances.in/wp-content/uploads/2023/05/unnamed-2.png">
-                            <div>
-                                <p class="fw-bold text-primary mb-0">Umesh Mishra</p>
-                                <p class="text-muted mb-0">Erat netus</p>
+                    <div class="swiper-slide">
+                        <div class="d-flex flex-column align-items-center align-items-sm-start">
+                            <p class="bg-dark border rounded border-dark p-4">I am very impressed about the services of
+                                all about finances</p>
+                            <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50"
+                                    height="50"
+                                    src="https://allaboutfinances.in/wp-content/uploads/2023/05/unnamed-2.png">
+                                <div>
+                                    <p class="fw-bold text-primary mb-0">Umesh Mishra</p>
+                                    <p class="text-muted mb-0">Erat netus</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-    </div>
-  </div>
-  <!-- If we need pagination -->
-  <div class="swiper-pagination"></div>
+                    <div class="swiper-slide">
+                        <div class="d-flex flex-column align-items-center align-items-sm-start">
+                            <p class="bg-dark border rounded border-dark p-4">I am very impressed about the services of
+                                all about finances</p>
+                            <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50"
+                                    height="50"
+                                    src="https://allaboutfinances.in/wp-content/uploads/2023/05/unnamed-2.png">
+                                <div>
+                                    <p class="fw-bold text-primary mb-0">Umesh Mishra</p>
+                                    <p class="text-muted mb-0">Erat netus</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="d-flex flex-column align-items-center align-items-sm-start">
+                            <p class="bg-dark border rounded border-dark p-4">I am very impressed about the services of
+                                all about finances</p>
+                            <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50"
+                                    height="50"
+                                    src="https://allaboutfinances.in/wp-content/uploads/2023/05/unnamed-2.png">
+                                <div>
+                                    <p class="fw-bold text-primary mb-0">Umesh Mishra</p>
+                                    <p class="text-muted mb-0">Erat netus</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
 
-  <!-- If we need navigation buttons -->
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-button-next"></div>
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
 
-</div>
-
-
-<style>
-    .swiper {
-        max-width: 720px;
-}
-
-
-.swiper .d-flex.flex-column.align-items-center.align-items-sm-start {
-    justify-content: center !important;
-    align-items: center !important;
-    margin-bottom: 90px;
-}
-
-
-
-
-</style>
-
-<script>
-
-
-
-    const swiper02 = new Swiper('#swiper-products-hl-plans', {
-  // Optional parameters
-  slidesPerView: 4,
-  loop: true,
-      grabCursor: true,
-      speed: 400,
-  spaceBetween: 100,
-
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-  },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-
-});
+            </div>
 
 
-    const swiper = new Swiper('.swiper', {
-  // Optional parameters
-  loop: true,
-         effect: "cube",
-      grabCursor: true,
-      cubeEffect: {
-        shadow: true,
-        slideShadows: false,
-        shadowOffset: 20,
-        shadowScale: 0.94,
-      },
+            <style>
+                .swiper {
+                    max-width: 720px;
+                }
 
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-  },
 
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
+                .swiper .d-flex.flex-column.align-items-center.align-items-sm-start {
+                    justify-content: center !important;
+                    align-items: center !important;
+                    margin-bottom: 90px;
+                }
+            </style>
 
-});
-</script>
+            <script>
+                const swiper = new Swiper('.swiper-testimonials', {
+                    // Optional parameters
+                    loop: true,
+                    effect: "cube",
+                    grabCursor: true,
+                    cubeEffect: {
+                        shadow: true,
+                        slideShadows: false,
+                        shadowOffset: 20,
+                        shadowScale: 0.94,
+                    },
+
+                    // If we need pagination
+                    pagination: {
+                        el: '.swiper-pagination',
+                    },
+
+                    // Navigation arrows
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+
+                });
+            </script>
         </div>
     </section>
+
+
+
+
+    
+    
+    
+    
     <section><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7000.666920777171!2d77.31129!3d28.67967!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfb2c5ac836e5%3A0xdb065b22b4effd1a!2sAll%20About%20Finances!5e0!3m2!1sen!2sus!4v1702078341908!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></section>
     <section class="py-5">
         <div class="container">
@@ -726,5 +1182,68 @@ get a list of most affordable home loan schemes.
     </footer>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/bold-and-dark.js"></script>
+
+
+    <script>
+        window.addEventListener('load', () => {
+
+            // var swiper_banks = new Swiper(".banksSwiper", {
+            //     slidesPerView: 3,
+            //     loop: true,
+            //     autoplay: {
+            //         delay: 1000,
+            //     },
+            //     spaceBetween: 30,
+            //     pagination: {
+            //         el: ".swiper-pagination",
+            //         clickable: true,
+            //     },
+            // });
+            var swiper_interest_charges = new Swiper(".swiper-01", {
+                slidesPerView: 4,
+                loop: true,
+                autoplay: {
+                    delay: 1000,
+                },
+                spaceBetween: 30,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                breakpoints: {
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 40,
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 50,
+        },
+      },
+            });
+
+            var swiper_hl_01 = new Swiper("#swiper-hl-01", {
+                loop: true,
+                autoplay: {
+                    delay: 1000,
+                },
+                grabCursor: true,
+      effect: "creative",
+      creativeEffect: {
+        prev: {
+          shadow: true,
+          translate: [0, 0, -400],
+        },
+        next: {
+          translate: ["100%", 0, 0],
+        },
+      },
+    });
+    })
+    </script>
 </body>
 </html>
