@@ -330,6 +330,73 @@ get a list of most affordable home loan schemes.
         
     </section>
 
+
+    <section class="my-5 container rounded p-5 bg-white" 
+    id="sec-bg-home-loan">
+        <div class="row">
+            <div class="col">
+                <div class="swiper" id="swiper-hl-01">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide bg-white">
+                            <img 
+                            class="img-fluid"
+                            style="max-height: 80px;"
+                            src="assets/img/hdfc.webp" alt="">
+                            <div class="text-dark d-flex gap-5 align-items-center">
+                                <h3 class="fs-2">
+                                    <span class="fs-1 fw-bold text-success">Home Loan</span>
+                                    <br>
+                                Offer Starting
+                                </h3>
+                                <span class="display-1">
+                                    @8.40%
+                                </span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide bg-white">
+                            <img 
+                            class="img-fluid"
+                            style="max-height: 80px;"
+                            src="assets/img/hdfc.webp" alt="">
+                            <div class="text-dark d-flex gap-5 align-items-center">
+                                <h3 class="fs-2">
+                                    <span class="fs-1 fw-bold text-success">Home Loan</span>
+                                    <br>
+                                Offer Starting
+                                </h3>
+                                <span class="display-1">
+                                    @8.50%
+                                </span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide bg-white">
+                            <img 
+                            class="img-fluid"
+                            style="max-height: 80px;"
+                            src="assets/img/hdfc.webp" alt="">
+                            <div class="text-dark d-flex gap-5 align-items-center">
+                                <h3 class="fs-2">
+                                    <span class="fs-1 fw-bold text-success">Home Loan</span>
+                                    <br>
+                                Offer Starting
+                                </h3>
+                                <span class="display-1">
+                                    @8.40%
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <!-- <img 
+                class="img-fluid"
+                style="max-width: 300px;"
+                src="assets/img/Home Loan.png" alt=""> -->
+            </div>
+        </div>
+    </section>
+
     <section>
         <div class="container bg-white rounded">
             <div class="p-5">
@@ -1159,28 +1226,24 @@ class="table table-bordered table-striped table-light">
       },
             });
 
-
-
-let btnF = document.querySelector("#requestQuoteButton");
-let form = document.querySelector("#modal1");
-
-btnF.addEventListener("click", function (e) {
-    t01();
-});
-
-function t01() {
-  // debugger
-  let modal_carousel = new Swiper(".form-carousel", {
-    slidesPerView: 4,
-    loop: true,
-    autoplay: {
-      delay: 1000,
+            var swiper_hl_01 = new Swiper("#swiper-hl-01", {
+                loop: true,
+                autoplay: {
+                    delay: 1000,
+                },
+                grabCursor: true,
+      effect: "creative",
+      creativeEffect: {
+        prev: {
+          shadow: true,
+          translate: [0, 0, -400],
+        },
+        next: {
+          translate: ["100%", 0, 0],
+        },
       },
-    spaceBetween: 30,
-  });
-
-}
-        })
+    });
+    })
     </script>
 </body>
 </html>
